@@ -1,0 +1,89 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/alessandro/Desktop/MBAdmin/MBAdmin/MBUploadableElements/MBUploadableCheckboxElement.swift",
+      "line": 14,
+      "symbol": "MBUploadableCheckboxElement.localeIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alessandro/Desktop/MBAdmin/MBAdmin/MBUploadableElements/MBUploadableCheckboxElement.swift",
+      "line": 16,
+      "symbol": "MBUploadableCheckboxElement.elementName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alessandro/Desktop/MBAdmin/MBAdmin/MBUploadableElements/MBUploadableCheckboxElement.swift",
+      "line": 32,
+      "symbol": "MBUploadableCheckboxElement.toForm()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alessandro/Desktop/MBAdmin/MBAdmin/MBUploadableElements/MBUploadableFilesElement.swift",
+      "line": 14,
+      "symbol": "MBUploadableFilesElement.localeIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alessandro/Desktop/MBAdmin/MBAdmin/MBUploadableElements/MBUploadableFilesElement.swift",
+      "line": 16,
+      "symbol": "MBUploadableFilesElement.elementName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alessandro/Desktop/MBAdmin/MBAdmin/MBUploadableElements/MBUploadableFilesElement.swift",
+      "line": 36,
+      "symbol": "MBUploadableFilesElement.toForm()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alessandro/Desktop/MBAdmin/MBAdmin/MBUploadableElements/MBUploadableImagesElement.swift",
+      "line": 14,
+      "symbol": "MBUploadableImagesElement.localeIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alessandro/Desktop/MBAdmin/MBAdmin/MBUploadableElements/MBUploadableImagesElement.swift",
+      "line": 16,
+      "symbol": "MBUploadableImagesElement.elementName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alessandro/Desktop/MBAdmin/MBAdmin/MBUploadableElements/MBUploadableImagesElement.swift",
+      "line": 57,
+      "symbol": "MBUploadableImagesElement.toForm()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alessandro/Desktop/MBAdmin/MBAdmin/MBUploadableElements/MBUploadableTextElement.swift",
+      "line": 14,
+      "symbol": "MBUploadableTextElement.localeIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alessandro/Desktop/MBAdmin/MBAdmin/MBUploadableElements/MBUploadableTextElement.swift",
+      "line": 16,
+      "symbol": "MBUploadableTextElement.elementName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alessandro/Desktop/MBAdmin/MBAdmin/MBUploadableElements/MBUploadableTextElement.swift",
+      "line": 32,
+      "symbol": "MBUploadableTextElement.toForm()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/alessandro/Desktop/MBAdmin"
+}

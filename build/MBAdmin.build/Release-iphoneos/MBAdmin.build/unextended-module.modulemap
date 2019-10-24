@@ -1,0 +1,10 @@
+framework module MBAdmin {
+  umbrella header "MBAdmin.h"
+
+  export *
+  module * { export * }
+}
+
+module MBAdmin.__Swift {
+    exclude header "MBAdmin-Swift.h"
+}

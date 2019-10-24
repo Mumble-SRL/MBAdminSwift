@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (70% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/MBUplodableElementProtocol.html">MBUplodableElementProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/MBAdmin.html">MBAdmin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MBUploadableCheckboxElement.html">MBUploadableCheckboxElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MBUploadableElementsFactory.html">MBUploadableElementsFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MBUploadableFilesElement.html">MBUploadableFilesElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MBUploadableImagesElement.html">MBUploadableImagesElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MBUploadableTextElement.html">MBUploadableTextElement</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='mbadmin' class='heading'>MBAdmin</h1>
+
+<p>In the MBAdmin package you can find the function toedit the sections of MBurger.
+You will have to use a token with write permission to edit the sections and with delete permission to delete them.</p>
+<h1 id='add-edit-a-section' class='heading'>Add/Edit a section</h1>
+
+<p>You can add a section to a block with the function <code>[MBAdmin addSectionToBlockWithBlockId:Elements:Success:Failure:]</code>. To call this function you need to create an array of <code>MBUploadableElement</code> objects. You should create it using the <code><a href="Structs/MBUploadableElementsFactory.html">MBUploadableElementsFactory</a></code> class that is created to this purpose. A MBUploadableElementsFactory is allocateed with a locale identifier and creates object with this locale identifier. All the integrity controls of the server are still present in the APIs, you will find the description of the error in the object passed to the failure block. Below an example code to create a section. </p>
+
+<p><strong>Objective-C</strong>:</p>
+<pre class="highlight plaintext"><code>MBUploadableElementsFactory *factory = [[MBUploadableElementsFactory alloc] initWithLocaleIdentifier:@"it"];
+NSArray *elements = @[[factory textElementWithName:@"title" Text:@"The title", [factory imagesElementWithName:@"image" Image:[UIImage imageNamed:@"test_image"]]]];
+[MBAdmin addSectionToBlockWithBlockId:BLOCK_ID Elements:elements Success:^{
+
+} Failure:^(NSError *error) {
+
+}];
+</code></pre>
+
+<p><strong>Swift</strong>:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">factory</span> <span class="o">=</span> <span class="kt">MBUploadableElementsFactory</span><span class="p">(</span><span class="nv">localeIdentifier</span><span class="p">:</span> <span class="s">"it"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">elements</span> <span class="o">=</span> <span class="p">[</span><span class="n">factory</span><span class="o">.</span><span class="nf">textElement</span><span class="p">(</span><span class="nv">withName</span><span class="p">:</span> <span class="s">"title"</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="s">"The title"</span><span class="p">),</span> <span class="n">factory</span><span class="o">.</span><span class="nf">imagesElement</span><span class="p">(</span><span class="nv">withName</span><span class="p">:</span> <span class="s">"image"</span><span class="p">,</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"Test"</span><span class="p">))]</span>
+<span class="kt">MBAdmin</span><span class="o">.</span><span class="nf">addSectionToBlock</span><span class="p">(</span><span class="nv">withBlockId</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">elements</span><span class="p">:</span> <span class="n">elements</span><span class="p">,</span> <span class="nv">success</span><span class="p">:</span> <span class="p">{</span>
+
+<span class="p">},</span> <span class="nv">failure</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+
+<span class="p">})</span>          
+</code></pre>
+
+<p>With a <code><a href="Structs/MBUploadableElementsFactory.html">MBUploadableElementsFactory</a></code> you can create an image/file element with a single image/file or with an array of images/files it creates a <code>MBUploadableImagesElement</code>/<code>MBUploadableFilesElement</code> in both cases.</p>
+
+<p>The edit function is very similar to the add. It will modifiy only the fields passed and the other elements will remain untouched.</p>
+<h1 id='delete-a-section' class='heading'>Delete a section</h1>
+
+<p>To delete a section with an id:</p>
+
+<p><strong>Objective-C</strong>:</p>
+<pre class="highlight plaintext"><code>[MBAdmin deleteSectionWithSectionId:SECTION_ID Success:^{
+
+} Failure:^(NSError *error) {
+
+}];
+</code></pre>
+
+<p><strong>Swift</strong>:</p>
+<pre class="highlight swift"><code><span class="kt">MBAdmin</span><span class="o">.</span><span class="nf">deleteSection</span><span class="p">(</span><span class="nv">withSectionId</span><span class="p">:</span> <span class="kt">SECTION_ID</span><span class="p">,</span> <span class="nv">success</span><span class="p">:</span> <span class="p">{</span>
+<span class="p">},</span> <span class="nv">failure</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+
+<span class="p">})</span>
+
+</code></pre>
+<h1 id='delete-a-media' class='heading'>Delete a media</h1>
+
+<p>You can delete a media (an image or a video), giving its id. with the function. The id of the media is the field id of the objects <code>MBImage</code> and <code>MBFile</code>.</p>
+
+<p><strong>Objective-C</strong>:</p>
+<pre class="highlight plaintext"><code>[MBAdmin deleteMediaWithMediaId:MEDIA_ID Success:^{
+
+} Failure:^(NSError *error) {
+
+}];
+</code></pre>
+
+<p><strong>Swift</strong>:</p>
+<pre class="highlight swift"><code><span class="kt">MBAdmin</span><span class="o">.</span><span class="nf">deleteMedia</span><span class="p">(</span><span class="nv">withMediaId</span><span class="p">:</span> <span class="kt">MEDIA_ID</span><span class="p">,</span> <span class="nv">success</span><span class="p">:</span> <span class="p">{</span>
+
+<span class="p">},</span> <span class="nv">failure</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+
+<span class="p">})</span>
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-10-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
