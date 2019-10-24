@@ -68,6 +68,7 @@ To delete a section with an id:
 
 ```swift
 MBAdmin.deleteSection(withSectionId: SECTION_ID, success: {
+
 }, failure: { (error) in
       
 })
