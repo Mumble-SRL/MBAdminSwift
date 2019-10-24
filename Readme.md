@@ -1,54 +1,69 @@
+<p align="center" >
+<img src="https://raw.githubusercontent.com/Mumble-SRL/MBurgerSwift/master/Images/logo.png" alt="MBurger Logo" title="MBurger Logo">
+</p>
+
+![Test Status](https://img.shields.io/badge/documentation-100%25-brightgreen.svg)
+![License: MIT](https://img.shields.io/badge/pod-v1.0.1-blue.svg)
+[![CocoaPods](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](LICENSE)
+
+
 # MBAdmin
 
-In the MBAdmin package you can find the function toedit the sections of MBurger.
-You will have to use a token with write permission to edit the sections and with delete permission to delete them.
+In the MBAdmin package you can find the functions to edit the sections of MBurger.
+You will have to use a token with write permissions to edit the sections and with delete permission to delete them.
 
-# Add/Edit a section
+## Installation
 
-You can add a section to a block with the function `[MBAdmin addSectionToBlockWithBlockId:Elements:Success:Failure:]`. To call this function you need to create an array of `MBUploadableElement` objects. You should create it using the `MBUploadableElementsFactory` class that is created to this purpose. A MBUploadableElementsFactory is allocateed with a locale identifier and creates object with this locale identifier. All the integrity controls of the server are still present in the APIs, you will find the description of the error in the object passed to the failure block. Below an example code to create a section. 
+### CocoaPods
 
-**Objective-C**:
+CocoaPods is a dependency manager for iOS, which automates and simplifies the process of using 3rd-party libraries in your projects. You can install CocoaPods with the following command:
 
-```objective-c
-MBUploadableElementsFactory *factory = [[MBUploadableElementsFactory alloc] initWithLocaleIdentifier:@"it"];
-NSArray *elements = @[[factory textElementWithName:@"title" Text:@"The title", [factory imagesElementWithName:@"image" Image:[UIImage imageNamed:@"test_image"]]]];
-[MBAdmin addSectionToBlockWithBlockId:BLOCK_ID Elements:elements Success:^{
-        
-} Failure:^(NSError *error) {
-        
-}];
+```ruby
+$ gem install cocoapods
 ```
 
-**Swift**:
+To integrate the MBurgerSwift into your Xcode project using CocoaPods, specify it in your Podfile:
+
+```ruby
+platform :ios, '10.0'
+
+target 'TargetName' do
+    pod 'MBAdmin'
+end
+```
+
+### Chartage
+> @TODO
+
+
+## Add/Edit a section
+
+You can add a section to a block with the function `addSectionToBlock(withBlockId:elements:success:failure:)`. To call this function you need to create an array of elements confrom to `MBUploadableElementProtocol`. To create it use the `MBUploadableElementsFactory` that is created. A MBUploadableElementsFactory is allocated with a locale identifier and creates object with this locale identifier. All the integrity controls of the server are still present in the APIs, you will find the description of the error in the object passed to the failure block. Below an example code to create a section. 
 
 ```swift
 let factory = MBUploadableElementsFactory(localeIdentifier: "it")
-let elements = [factory.textElement(withName: "title", text: "The title"), factory.imagesElement(withName: "image", image: UIImage.init(named: "Test"))]
-MBAdmin.addSectionToBlock(withBlockId: 1, elements: elements, success: {
+let elements: [MBUplodableElementProtocol] = [factory.createTextElement(name: "name", text: "text"),
+factory.createImageElement(name: "name", image: UIImage(named: "image_name")!)]
+
+MBAdmin.addSectionToBlock(withBlockId: 621, elements: elements, success: { sectionId in
 
 }, failure: { (error) in
             
-})          
+})         
 ```
 
-With a `MBUploadableElementsFactory` you can create an image/file element with a single image/file or with an array of images/files it creates a `MBUploadableImagesElement`/`MBUploadableFilesElement` in both cases.
+With a `MBUploadableElementsFactory` you can create: 
+
+* an array or a single of image with `MBUploadableImagesElement`
+* an array or a single of image with `MBUploadableFilesElement`
+* a text with `MBUploadableTextElement`
+* a checkbox element with `MBUploadableCheckboxElement`
 
 The edit function is very similar to the add. It will modifiy only the fields passed and the other elements will remain untouched.
 
-# Delete a section
+## Delete a section
 
 To delete a section with an id:
-
-**Objective-C**:
-
-```objective-c
-[MBAdmin deleteSectionWithSectionId:SECTION_ID Success:^{
-        
-} Failure:^(NSError *error) {
-        
-}];
-```
-**Swift**:
 
 ```swift
 MBAdmin.deleteSection(withSectionId: SECTION_ID, success: {
@@ -58,22 +73,9 @@ MBAdmin.deleteSection(withSectionId: SECTION_ID, success: {
 
 ```
 
+## Delete a media
 
-# Delete a media
-
-You can delete a media (an image or a video), giving its id. with the function. The id of the media is the field id of the objects `MBImage` and `MBFile`.
-
-**Objective-C**:
-
-```objective-c
-[MBAdmin deleteMediaWithMediaId:MEDIA_ID Success:^{
-        
-} Failure:^(NSError *error) {
-        
-}];
-```
-
-**Swift**:
+You can delete a media(`MBFile`) using `deleteMedia(withMediaId:success:failure:)` that requires the id of the media to delete. The id of the media is the field id of the `MBFile`.
 
 ```swift
 MBAdmin.deleteMedia(withMediaId: MEDIA_ID, success: {
@@ -82,3 +84,11 @@ MBAdmin.deleteMedia(withMediaId: MEDIA_ID, success: {
             
 })
 ```
+
+## Documentation
+
+For additional information, you can check out the full [docs](https://github.com/Mumble-SRL/MBAdmin/tree/master/docs).
+
+Since this SDK extends [MBurger](https://github.com/Mumble-SRL/MBurgerSwift), you can check out the full [SDK Reference](https://github.com/Mumble-SRL/MBurgerSwift/tree/master/docs) of the MBurger SDK.
+
+

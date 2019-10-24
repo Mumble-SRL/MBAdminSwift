@@ -11,8 +11,11 @@ import MBNetworkingSwift
 
 /// An uploadable element representing some images.
 public struct MBUploadableImagesElement: MBUplodableElementProtocol {
+    
+    /// The locale of the element. This is needed to construct the parameter name.
     public var localeIdentifier: String
     
+    /// The name/key of the element.
     public var elementName: String
     
     /// The array of images.
@@ -54,6 +57,8 @@ public struct MBUploadableImagesElement: MBUplodableElementProtocol {
         }
     }
     
+    /// Converts the element to an array of MBMultipartForm representing it.
+    /// - Returns: An optional array of MBMultipartForm objects.
     public func toForm() -> [MBMultipartForm]? {
         var multipartElements: [MBMultipartForm]?
         if images.count != 0 {
