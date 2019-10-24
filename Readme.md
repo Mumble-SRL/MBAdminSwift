@@ -16,7 +16,7 @@ You will have to use a token with write permissions to edit the sections and wit
 
 ### CocoaPods
 
-CocoaPods is a dependency manager for iOS, which automates and simplifies the process of using 3rd-party libraries in your projects. You can install CocoaPods with the following command:
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa Projects, which automates and simplifies the process of using 3rd-party libraries in your projects. You can install CocoaPods with the following command:
 
 ```ruby
 $ gem install cocoapods
@@ -28,11 +28,12 @@ To integrate the MBurgerSwift into your Xcode project using CocoaPods, specify i
 platform :ios, '10.0'
 
 target 'TargetName' do
-    pod 'MBAdmin'
+    pod 'MBAdmin' '~> 1.0.1'
 end
 ```
 
 ### Chartage
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
 > @TODO
 
 
@@ -89,6 +90,6 @@ MBAdmin.deleteMedia(withMediaId: MEDIA_ID, success: {
 
 For additional information, you can check out the full [docs](https://github.com/Mumble-SRL/MBAdmin/tree/master/docs).
 
-Since this SDK extends [MBurger](https://github.com/Mumble-SRL/MBurgerSwift), you can check out the full [SDK Reference](https://github.com/Mumble-SRL/MBurgerSwift/tree/master/docs) of the MBurger SDK.
+Since this SDK extends [MBurger](https://github.com/Mumble-SRL/MBurgerSwift), you can check out the full [reference doc](https://github.com/Mumble-SRL/MBurgerSwift/tree/master/docs) of the MBurger SDK.
 
 

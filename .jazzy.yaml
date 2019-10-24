@@ -1,0 +1,21 @@
+author: Mumble
+author_url: https://mumbleideas.it/
+github_url: https://github.com/Mumble-SRL/MBAdmin
+
+theme: fullwidth
+
+custom_categories:
+
+  - name: MBAdmin
+    children:
+    - MBAdmin
+  - name: MBUplodableElementFactory
+    children:
+    - MBUplodableElementFactory
+  - name: MBUplodableElements
+    children:
+    - MBUplodableCheckboxElement
+    - MBUplodableElementProtocol
+    - MBUplodableFilesElement
+    - MBUplodableImagesElement
+    - MBUplodableTextElement
