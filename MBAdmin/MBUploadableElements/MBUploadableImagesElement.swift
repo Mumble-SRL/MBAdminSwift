@@ -63,7 +63,7 @@ public struct MBUploadableImagesElement: MBUplodableElementProtocol {
         var multipartElements: [MBMultipartForm]?
         if images.count != 0 {
             multipartElements = []
-            self.images.enumerated().forEach { (index, image) in
+            self.images.enumerated().forEach { (index, _) in
                 let filePath = self.fileURL(forIndex: index)
                 multipartElements?.append(MBMultipartForm(name: parameterName(forIndex: index), url: filePath, mimeType: "image/jpeg"))
             }

@@ -97,7 +97,7 @@ public struct MBAdmin {
                              locale: MBManager.shared.localeString,
                              apiName: apiName,
                              method: .delete,
-                             success: { (response) in
+                             success: { (_) in
                                 success()
         }, failure: { error in
             failure(error)
@@ -120,7 +120,7 @@ public struct MBAdmin {
                              locale: MBManager.shared.localeString,
                              apiName: apiName,
                              method: .delete,
-                             success: { (response) in
+                             success: { (_) in
                                 success()
         }, failure: { error in
             failure(error)
