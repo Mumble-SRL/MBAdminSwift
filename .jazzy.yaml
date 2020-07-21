@@ -1,3 +1,16 @@
+clean: true
+objc: false
+readme: Readme.md
+framework_root: MBAdmin
+module_version: 1.0
+sdk: iphonesimulator
+
+xcodebuild_arguments:
+    - "-workspace"
+    - "MBAdmin.xcworkspace"
+    - "-scheme"
+    - "MBAdmin"
+
 author: Mumble
 author_url: https://mumbleideas.it/
 github_url: https://github.com/Mumble-SRL/MBAdmin
@@ -11,11 +24,13 @@ custom_categories:
     - MBAdmin
   - name: MBUplodableElementFactory
     children:
-    - MBUplodableElementFactory
+    - MBUploadableElementsFactory
   - name: MBUplodableElements
     children:
-    - MBUplodableCheckboxElement
     - MBUplodableElementProtocol
-    - MBUplodableFilesElement
-    - MBUplodableImagesElement
-    - MBUplodableTextElement
+    - MBUploadableCheckboxElement
+    - MBUploadableFilesElement
+    - MBUploadableImagesElement
+    - MBUploadableTextElement
+    - MBUploadableColorElement
+    - MBUploadableRelationElement
