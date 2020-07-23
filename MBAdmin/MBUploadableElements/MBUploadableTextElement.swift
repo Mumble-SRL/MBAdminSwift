@@ -10,7 +10,7 @@ import Foundation
 import MBNetworkingSwift
 
 /// An uploadable element representing the text.
-public struct MBUploadableTextElement: MBUplodableElementProtocol {
+public struct MBUploadableTextElement: MBUplodableElement {
     
     /// The locale of the element. This is needed to construct the parameter name.
     public var localeIdentifier: String

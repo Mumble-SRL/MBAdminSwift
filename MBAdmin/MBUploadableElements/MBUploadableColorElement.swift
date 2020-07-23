@@ -10,7 +10,7 @@ import UIKit
 import MBNetworkingSwift
 
 /// An uploadable element representing a color.
-public struct MBUploadableColorElement: MBUplodableElementProtocol {
+public struct MBUploadableColorElement: MBUplodableElement {
     /// The locale of the element. This is needed to construct the parameter name.
     public var localeIdentifier: String
     
@@ -49,7 +49,7 @@ public struct MBUploadableColorElement: MBUplodableElementProtocol {
         
         let rgb: Int = (Int)(red*255)<<16 | (Int)(green*255)<<8 | (Int)(blue*255)<<0
         
-        return String(format:"#%06x", rgb)
+        return String(format: "#%06x", rgb)
     }
 
 }

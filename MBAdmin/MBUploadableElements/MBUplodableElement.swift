@@ -1,5 +1,5 @@
 //
-//  MBUplodableElementProtocol.swift
+//  MBUplodableElement.swift
 //  MBurgerSwift
 //
 //  Created by Alessandro Viviani on 02/10/2019.
@@ -10,7 +10,7 @@ import Foundation
 import MBNetworkingSwift
 
 /// A protocol to which all MBUploadableElement needs to be conform, it has all the basic data that a MBUplodableElement needs.
-public protocol MBUplodableElementProtocol {
+public protocol MBUplodableElement {
 
     /// The locale of the element. This is needed to construct the parameter name.
     var localeIdentifier: String { get }
@@ -23,7 +23,7 @@ public protocol MBUplodableElementProtocol {
     func toForm() -> [MBMultipartForm]?
 }
 
-public extension MBUplodableElementProtocol {
+public extension MBUplodableElement {
     /// The name of the element, used when the element will be passed to the api.
     var parameterName: String { return String(format: "elements[%@][%@]", localeIdentifier, elementName) }
 }

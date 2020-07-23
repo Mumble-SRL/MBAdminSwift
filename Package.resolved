@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MBNetworkingSwift",
+        "repositoryURL": "https://github.com/Mumble-SRL/MBNetworkingSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "3fb1e271b4a79c68fc117a6b2805567e67ad2bf8",
+          "version": "1.0.15"
+        }
+      },
+      {
+        "package": "MBurgerSwift",
+        "repositoryURL": "https://github.com/Mumble-SRL/MBurgerSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "77dcc3de68ed8c8f078e708998c507294e835fd7",
+          "version": "1.0.8"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

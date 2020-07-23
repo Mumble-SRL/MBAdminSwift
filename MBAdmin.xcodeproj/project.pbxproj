@@ -14,10 +14,11 @@
 		D2C5384F2361A33900AF68D9 /* MBAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C5384E2361A33900AF68D9 /* MBAdmin.swift */; };
 		D2C538542361A34C00AF68D9 /* MBUploadableTextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C538502361A34C00AF68D9 /* MBUploadableTextElement.swift */; };
 		D2C538552361A34C00AF68D9 /* MBUploadableImagesElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C538512361A34C00AF68D9 /* MBUploadableImagesElement.swift */; };
-		D2C538562361A34C00AF68D9 /* MBUplodableElementProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C538522361A34C00AF68D9 /* MBUplodableElementProtocol.swift */; };
+		D2C538562361A34C00AF68D9 /* MBUplodableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C538522361A34C00AF68D9 /* MBUplodableElement.swift */; };
 		D2C538572361A34C00AF68D9 /* MBUploadableFilesElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C538532361A34C00AF68D9 /* MBUploadableFilesElement.swift */; };
 		D2C5385A2361A35100AF68D9 /* MBUploadableElementsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C538582361A35100AF68D9 /* MBUploadableElementsFactory.swift */; };
 		D2C5385B2361A35100AF68D9 /* MBUploadableCheckboxElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C538592361A35100AF68D9 /* MBUploadableCheckboxElement.swift */; };
+		ECAAD36D24C973A1006E2EA3 /* MBUploadableMultipleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAD36C24C973A1006E2EA3 /* MBUploadableMultipleElement.swift */; };
 		ECC1713124C71A8000F45662 /* MBUploadableColorElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1713024C71A8000F45662 /* MBUploadableColorElement.swift */; };
 		ECC1713324C71C4C00F45662 /* MBUploadableRelationElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1713224C71C4C00F45662 /* MBUploadableRelationElement.swift */; };
 /* End PBXBuildFile section */
@@ -45,10 +46,11 @@
 		D2C5384E2361A33900AF68D9 /* MBAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBAdmin.swift; sourceTree = "<group>"; };
 		D2C538502361A34C00AF68D9 /* MBUploadableTextElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBUploadableTextElement.swift; sourceTree = "<group>"; };
 		D2C538512361A34C00AF68D9 /* MBUploadableImagesElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBUploadableImagesElement.swift; sourceTree = "<group>"; };
-		D2C538522361A34C00AF68D9 /* MBUplodableElementProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBUplodableElementProtocol.swift; sourceTree = "<group>"; };
+		D2C538522361A34C00AF68D9 /* MBUplodableElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBUplodableElement.swift; sourceTree = "<group>"; };
 		D2C538532361A34C00AF68D9 /* MBUploadableFilesElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBUploadableFilesElement.swift; sourceTree = "<group>"; };
 		D2C538582361A35100AF68D9 /* MBUploadableElementsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBUploadableElementsFactory.swift; sourceTree = "<group>"; };
 		D2C538592361A35100AF68D9 /* MBUploadableCheckboxElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBUploadableCheckboxElement.swift; sourceTree = "<group>"; };
+		ECAAD36C24C973A1006E2EA3 /* MBUploadableMultipleElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBUploadableMultipleElement.swift; sourceTree = "<group>"; };
 		ECC1713024C71A8000F45662 /* MBUploadableColorElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBUploadableColorElement.swift; sourceTree = "<group>"; };
 		ECC1713224C71C4C00F45662 /* MBUploadableRelationElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBUploadableRelationElement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,7 +142,8 @@
 				D2C538502361A34C00AF68D9 /* MBUploadableTextElement.swift */,
 				ECC1713024C71A8000F45662 /* MBUploadableColorElement.swift */,
 				ECC1713224C71C4C00F45662 /* MBUploadableRelationElement.swift */,
-				D2C538522361A34C00AF68D9 /* MBUplodableElementProtocol.swift */,
+				ECAAD36C24C973A1006E2EA3 /* MBUploadableMultipleElement.swift */,
+				D2C538522361A34C00AF68D9 /* MBUplodableElement.swift */,
 			);
 			path = MBUploadableElements;
 			sourceTree = "<group>";
@@ -299,7 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2C538562361A34C00AF68D9 /* MBUplodableElementProtocol.swift in Sources */,
+				D2C538562361A34C00AF68D9 /* MBUplodableElement.swift in Sources */,
 				D2C5385A2361A35100AF68D9 /* MBUploadableElementsFactory.swift in Sources */,
 				ECC1713124C71A8000F45662 /* MBUploadableColorElement.swift in Sources */,
 				ECC1713324C71C4C00F45662 /* MBUploadableRelationElement.swift in Sources */,
@@ -307,6 +310,7 @@
 				D2C5384F2361A33900AF68D9 /* MBAdmin.swift in Sources */,
 				D2C5385B2361A35100AF68D9 /* MBUploadableCheckboxElement.swift in Sources */,
 				D2C538542361A34C00AF68D9 /* MBUploadableTextElement.swift in Sources */,
+				ECAAD36D24C973A1006E2EA3 /* MBUploadableMultipleElement.swift in Sources */,
 				D2C538552361A34C00AF68D9 /* MBUploadableImagesElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +470,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MBAdmin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -494,6 +499,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MBAdmin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

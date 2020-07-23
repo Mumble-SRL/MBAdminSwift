@@ -10,7 +10,7 @@ import Foundation
 import MBNetworkingSwift
 
 /// An uploadable element representing a checkbox.
-public struct MBUploadableCheckboxElement: MBUplodableElementProtocol {
+public struct MBUploadableCheckboxElement: MBUplodableElement {
     
     /// The locale of the element. This is needed to construct the parameter name.
     public var localeIdentifier: String
