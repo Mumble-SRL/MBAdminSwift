@@ -14,6 +14,15 @@ You will have to use a token with write permissions to edit the sections and wit
 
 ## Installation
 
+# Swift Package Manager
+
+With Xcode 11 you can start using [Swift Package Manager](https://swift.org/package-manager/) to add **MBAdmin** to your project. Follow those simple steps:
+
+* In Xcode go to File > Swift Packages > Add Package Dependency.
+* Enter `https://github.com/Mumble-SRL/MBAdmin.git` in the "Choose Package Repository" dialog and press Next.
+* Specify the version using rule "Up to Next Major" with "1.0.2" as its earliest version and press Next.
+* Xcode will try to resolving the version, after this, you can choose the `MBAdmin ` library and add it to your app target.
+
 ### CocoaPods
 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa Projects, which automates and simplifies the process of using 3rd-party libraries in your projects. You can install CocoaPods with the following command:
