@@ -1,8 +1,8 @@
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 target 'MBAdmin' do
-    use_frameworks!
-   
-    pod 'MBurgerSwift'
-    
+  use_frameworks!
+  
+  pod 'MBurgerSwift', path: '../MBurgerSwift'
+  
 end

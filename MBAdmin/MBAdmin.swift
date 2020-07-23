@@ -22,7 +22,7 @@ public struct MBAdmin {
     ///   - failure: A block that will be called when the request ends incorrectly. This block has no return value and takes one argument.
     ///   - error: The error describing the error that occurred.
     public static func addSectionToBlock(withBlockId blockId: Int,
-                                         elements: [MBUplodableElementProtocol],
+                                         elements: [MBUplodableElement],
                                          success: @escaping(_ sectionId: Int) -> Void,
                                          failure: @escaping(_ error: Error) -> Void) {
         var multipartForms = [MBMultipartForm]()
@@ -56,7 +56,7 @@ public struct MBAdmin {
     ///   - failure: A block that will be called when the request ends incorrectly. This block has no return value and takes one argument.
     ///   - error: The error describing the error that occurred.
     public static func editSection(withSectionId id: Int,
-                                   elements: [MBUplodableElementProtocol],
+                                   elements: [MBUplodableElement],
                                    success: @escaping() -> Void,
                                    failure: @escaping(_ error: Error) -> Void) {
         var multipartForms = [MBMultipartForm]()

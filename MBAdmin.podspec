@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MBAdmin"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "A package that extends the MBurger SDK."
   spec.description  = "With MBAdmin you can edit sections of MBurger."
   spec.homepage     = "https://github.com/Mumble-SRL/MBAdmin"
@@ -63,7 +63,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/Mumble-SRL/MBAdmin.git", :tag => "1.0.1" }
+  spec.source       = { :git => "https://github.com/Mumble-SRL/MBAdmin.git", :tag => "1.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -99,7 +99,7 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  # spec.framework  = "CoreLocation"
+  spec.framework  = "UIKit"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"

@@ -1,24 +1,23 @@
 PODS:
-  - MBNetworkingSwift (1.0.5)
-  - MBurgerSwift (1.0.3):
+  - MBNetworkingSwift (1.0.14)
+  - MBurgerSwift (1.0.7):
     - MBNetworkingSwift
-    - SAMKeychain
-  - SAMKeychain (1.5.3)
 
 DEPENDENCIES:
-  - MBurgerSwift
+  - MBurgerSwift (from `../MBurgerSwift`)
 
 SPEC REPOS:
   trunk:
     - MBNetworkingSwift
-    - MBurgerSwift
-    - SAMKeychain
+
+EXTERNAL SOURCES:
+  MBurgerSwift:
+    :path: "../MBurgerSwift"
 
 SPEC CHECKSUMS:
-  MBNetworkingSwift: 98597079391834bbe57394eb94e7206707bdaa44
-  MBurgerSwift: 09205229b925f5874ed03006efaa69d8581da75b
-  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  MBNetworkingSwift: e24b93be41ce4fb9247fb902bf5db2877e73a446
+  MBurgerSwift: 0a5324876000a1703965b2ba20495423157691df
 
-PODFILE CHECKSUM: 19f93cc5df35d11c51d9d9be25f77e4e5d4ac55b
+PODFILE CHECKSUM: 01b420b21bec8782ae461338739979fc391c0a4d
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3

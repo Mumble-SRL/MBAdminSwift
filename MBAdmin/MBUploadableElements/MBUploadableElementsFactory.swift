@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /// Used to create MBUploadableElement without specifiyng the locale for every item.
 /// The locale is initialized with the factory and passed to all the objects. You can also change the locale and use the same instance of a MBUploadableElementsFactory to create objects with a different locale.
@@ -77,4 +78,14 @@ public struct MBUploadableElementsFactory {
     public func createFilesElement(name: String, files: [URL]) -> MBUploadableFilesElement {
         return MBUploadableFilesElement(elementName: name, localeIdentifier: localeIdentifier, fileUrls: files)
     }
+    
+    /// Creates a multiple element with an array of selected values.
+    /// - Parameters:
+    ///   - name: The name of the element.
+    ///   - values: The values of the element.
+    /// - Returns: A MBUploadableMultipleElement.
+    public func createMultipleElement(name: String, values: [String]) -> MBUploadableMultipleElement {
+        return MBUploadableMultipleElement(elementName: name, localeIdentifier: localeIdentifier, values: values)
+    }
+
 }
