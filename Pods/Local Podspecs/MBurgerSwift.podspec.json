@@ -1,6 +1,6 @@
 {
   "name": "MBurgerSwift",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "summary": "A Swift version of MBurger SDK",
   "description": "MBurger is a client libary, written in Swift, that can be used to interact with the MBurger API.",
   "homepage": "https://github.com/Mumble-SRL/MBurgerSwift",
@@ -17,7 +17,7 @@
   },
   "source": {
     "git": "https://github.com/Mumble-SRL/MBurgerSwift.git",
-    "tag": "1.0.7"
+    "tag": "1.0.8"
   },
   "source_files": [
     "MBurgerSwift/*.{h,m,swift}",
