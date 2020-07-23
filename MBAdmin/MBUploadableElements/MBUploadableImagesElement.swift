@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import MBNetworkingSwift
 
 /// An uploadable element representing some images.

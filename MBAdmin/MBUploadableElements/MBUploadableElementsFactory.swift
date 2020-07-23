@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /// Used to create MBUploadableElement without specifiyng the locale for every item.
 /// The locale is initialized with the factory and passed to all the objects. You can also change the locale and use the same instance of a MBUploadableElementsFactory to create objects with a different locale.
