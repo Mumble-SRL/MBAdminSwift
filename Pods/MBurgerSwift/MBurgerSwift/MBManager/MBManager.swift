@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 /// The manager of the SDK.
 public final class MBManager {
-    private init() {}
+    private init() { }
     
     /// Creates and returns a singleton `MBManager`.
     /// - Warning: Don't allocate an instance of MBManager yourself.
@@ -23,7 +24,7 @@ public final class MBManager {
     public var development: Bool = false
     
     /// An array of plugin objects that can add functionality to the core MBurger.
-    public var plugins: [MBPluginProtocol] = []
+    public var plugins: [MBPlugin] = []
     
     /// The locale used to make the requests.
     public var locale: Locale?
@@ -50,6 +51,15 @@ public final class MBManager {
         let localeIdentifier = locale.identifier
         let index = localeIdentifier.index(localeIdentifier.startIndex, offsetBy: 2)
         return String(localeIdentifier.prefix(upTo: index))
+    }
+    
+    // MARK: - Plugins handling
+    
+    /// Tells to MBurger and plugins that the app has started, used to do some startup work for audience and automation plugins.
+    public func applicationDidFinishLaunchingWithOptions(launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        
+        MBPluginsManager.handlePluginStartup(plugins: plugins,
+                                             launchOptions: launchOptions)        
     }
 }
 
