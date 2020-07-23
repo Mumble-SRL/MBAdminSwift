@@ -4,20 +4,17 @@ PODS:
     - MBNetworkingSwift
 
 DEPENDENCIES:
-  - MBurgerSwift (from `../MBurgerSwift`)
+  - MBurgerSwift
 
 SPEC REPOS:
   trunk:
     - MBNetworkingSwift
-
-EXTERNAL SOURCES:
-  MBurgerSwift:
-    :path: "../MBurgerSwift"
+    - MBurgerSwift
 
 SPEC CHECKSUMS:
   MBNetworkingSwift: e24b93be41ce4fb9247fb902bf5db2877e73a446
   MBurgerSwift: 106e3302460301b99777ca134698e28f95f932c5
 
-PODFILE CHECKSUM: 01b420b21bec8782ae461338739979fc391c0a4d
+PODFILE CHECKSUM: 45e0fa945425fd0fd7a4e79c508edcd644b35373
 
 COCOAPODS: 1.9.3
