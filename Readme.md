@@ -12,9 +12,9 @@
 In the MBAdmin package you can find the functions to edit the sections of MBurger.
 You will have to use a token with write permissions to edit the sections and with delete permission to delete them.
 
-## Installation
+# Installation
 
-# Swift Package Manager
+## Swift Package Manager
 
 With Xcode 11 you can start using [Swift Package Manager](https://swift.org/package-manager/) to add **MBAdmin** to your project. Follow those simple steps:
 
@@ -23,7 +23,7 @@ With Xcode 11 you can start using [Swift Package Manager](https://swift.org/pack
 * Specify the version using rule "Up to Next Major" with "1.0.2" as its earliest version and press Next.
 * Xcode will try to resolving the version, after this, you can choose the `MBAdmin ` library and add it to your app target.
 
-### CocoaPods
+## CocoaPods
 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa Projects, which automates and simplifies the process of using 3rd-party libraries in your projects. You can install CocoaPods with the following command:
 
@@ -37,16 +37,24 @@ To integrate the MBurgerSwift into your Xcode project using CocoaPods, specify i
 platform :ios, '10.0'
 
 target 'TargetName' do
-    pod 'MBAdmin' '~> 1.0.1'
+    pod 'MBAdmin' '~> 1.0.2'
 end
 ```
 
-### Chartage
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
-> @TODO
+## Chartage
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate MBAdmin into your Xcode project using Carthage, specify it in your Cartfile:
 
+```
+github "Mumble-SRL/MBAdmin"
+```
 
-## Add/Edit a section
+## Manual installation
+
+To install the library manually drag and drop the folder `MBAdmin` to your project structure in XCode. 
+
+Note that `MBAdmin ` has `MBurgerSwift` as a dependency, so you have to install also this library.
+
+# Add/Edit a section
 
 You can add a section to a block with the function `addSectionToBlock(withBlockId:elements:success:failure:)`. To call this function you need to create an array of elements confrom to `MBUploadableElementProtocol`. To create it use the `MBUploadableElementsFactory` that is created. A MBUploadableElementsFactory is allocated with a locale identifier and creates object with this locale identifier. All the integrity controls of the server are still present in the APIs, you will find the description of the error in the object passed to the failure block. Below an example code to create a section. 
 
@@ -71,7 +79,7 @@ With a `MBUploadableElementsFactory` you can create:
 
 The edit function is very similar to the add. It will modifiy only the fields passed and the other elements will remain untouched.
 
-## Delete a section
+# Delete a section
 
 To delete a section with an id:
 
@@ -84,7 +92,7 @@ MBAdmin.deleteSection(withSectionId: SECTION_ID, success: {
 
 ```
 
-## Delete a media
+# Delete a media
 
 You can delete a media(`MBFile`) using `deleteMedia(withMediaId:success:failure:)` that requires the id of the media to delete. The id of the media is the field id of the `MBFile`.
 
@@ -96,7 +104,7 @@ MBAdmin.deleteMedia(withMediaId: MEDIA_ID, success: {
 })
 ```
 
-## Documentation
+# Documentation
 
 For additional information, you can check out the full [docs](https://github.com/Mumble-SRL/MBAdmin/tree/master/docs).
 
