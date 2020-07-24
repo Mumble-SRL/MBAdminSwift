@@ -21,7 +21,7 @@ With Xcode 11 you can start using [Swift Package Manager](https://swift.org/pack
 * In Xcode go to File > Swift Packages > Add Package Dependency.
 * Enter `https://github.com/Mumble-SRL/MBAdmin.git` in the "Choose Package Repository" dialog and press Next.
 * Specify the version using rule "Up to Next Major" with "1.0.2" as its earliest version and press Next.
-* Xcode will try to resolving the version, after this, you can choose the `MBAdmin ` library and add it to your app target.
+* Xcode will try to resolving the version, after this, you can choose the `MBAdmin` library and add it to your app target.
 
 ## CocoaPods
 
@@ -37,7 +37,7 @@ To integrate the MBurgerSwift into your Xcode project using CocoaPods, specify i
 platform :ios, '10.0'
 
 target 'TargetName' do
-    pod 'MBAdmin' '~> 1.0.2'
+    pod 'MBAdminSwift' '~> 1.0.6'
 end
 ```
 
@@ -50,9 +50,9 @@ github "Mumble-SRL/MBAdmin"
 
 ## Manual installation
 
-To install the library manually drag and drop the folder `MBAdmin` to your project structure in XCode. 
+To install the library manually drag and drop the folder `MBAdminSwift` to your project structure in XCode. 
 
-Note that `MBAdmin ` has `MBurgerSwift` as a dependency, so you have to install also this library.
+Note that `MBAdminSwift` has `MBurgerSwift` as a dependency, so you have to install also this library manually.
 
 # Add/Edit a section
 

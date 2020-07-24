@@ -1,15 +1,16 @@
+
 clean: true
 objc: false
 readme: Readme.md
-framework_root: MBAdmin
+framework_root: MBAdminSwift
 module_version: 1.0
 sdk: iphonesimulator
 
 xcodebuild_arguments:
     - "-workspace"
-    - "MBAdmin.xcworkspace"
+    - "MBAdminSwift.xcworkspace"
     - "-scheme"
-    - "MBAdmin"
+    - "MBAdminSwift"
 
 author: Mumble
 author_url: https://mumbleideas.it/
