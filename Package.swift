@@ -4,12 +4,13 @@
 import PackageDescription
 
 let package = Package(
-    name: "MBAdmin",
+    name: "MBAdminSwift",
+    platforms: [.iOS(.v11)],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
-            name: "MBAdmin",
-            targets: ["MBAdmin"])
+            name: "MBAdminSwift",
+            targets: ["MBAdminSwift"])
 
     ],
     dependencies: [
@@ -17,13 +18,13 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "MBAdmin",
+            name: "MBAdminSwift",
             dependencies: ["MBurgerSwift"],
-            path: "MBAdmin"
+            path: "MBAdminSwift"
         ),
         .testTarget(
-            name: "MBAdminTests",
-            dependencies: ["MBAdmin"],
-            path: "MBAdminTests")
+            name: "MBAdminSwiftTests",
+            dependencies: ["MBAdminSwift"],
+            path: "MBAdminSwiftTests")
     ]
 )
