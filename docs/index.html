@@ -32,7 +32,7 @@
       </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/Mumble-SRL/MBAdmin">
+          <a class="header-link" href="https://github.com/Mumble-SRL/MBAdminSwift">
             <img class="header-icon" src="img/gh.png"/>
             View on GitHub
           </a>
@@ -129,9 +129,9 @@ You will have to use a token with write permissions to edit the sections and wit
 
 <ul>
 <li>In Xcode go to File &gt; Swift Packages &gt; Add Package Dependency.</li>
-<li>Enter <code>https://github.com/Mumble-SRL/MBAdmin.git</code> in the &ldquo;Choose Package Repository&rdquo; dialog and press Next.</li>
-<li>Specify the version using rule &ldquo;Up to Next Major&rdquo; with &ldquo;1.0.2&rdquo; as its earliest version and press Next.</li>
-<li>Xcode will try to resolving the version, after this, you can choose the <code><a href="Structs/MBAdmin.html">MBAdmin</a></code> library and add it to your app target.</li>
+<li>Enter <code>https://github.com/Mumble-SRL/MBAdminSwift.git</code> in the &ldquo;Choose Package Repository&rdquo; dialog and press Next.</li>
+<li>Specify the version using rule &ldquo;Up to Next Major&rdquo; with &ldquo;1.0.6&rdquo; as its earliest version and press Next.</li>
+<li>Xcode will try to resolving the version, after this, you can choose the <code>MBAdminSwift</code> library and add it to your app target.</li>
 </ul>
 <h2 id='cocoapods' class='heading'>CocoaPods</h2>
 
@@ -143,19 +143,19 @@ You will have to use a token with write permissions to edit the sections and wit
 <pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'10.0'</span>
 
 <span class="n">target</span> <span class="s1">'TargetName'</span> <span class="k">do</span>
-    <span class="n">pod</span> <span class="s1">'MBAdmin'</span> <span class="s1">'~&gt; 1.0.2'</span>
+    <span class="n">pod</span> <span class="s1">'MBAdminSwift'</span> <span class="s1">'~&gt; 1.0.6'</span>
 <span class="k">end</span>
 </code></pre>
 <h2 id='chartage' class='heading'>Chartage</h2>
 
 <p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate MBAdmin into your Xcode project using Carthage, specify it in your Cartfile:</p>
-<pre class="highlight plaintext"><code>github "Mumble-SRL/MBAdmin"
+<pre class="highlight plaintext"><code>github "Mumble-SRL/MBAdminSwift"
 </code></pre>
 <h2 id='manual-installation' class='heading'>Manual installation</h2>
 
-<p>To install the library manually drag and drop the folder <code><a href="Structs/MBAdmin.html">MBAdmin</a></code> to your project structure in XCode. </p>
+<p>To install the library manually drag and drop the folder <code>MBAdminSwift</code> to your project structure in XCode. </p>
 
-<p>Note that <code><a href="Structs/MBAdmin.html">MBAdmin</a></code> has <code>MBurgerSwift</code> as a dependency, so you have to install also this library.</p>
+<p>Note that <code>MBAdminSwift</code> has <code>MBurgerSwift</code> as a dependency, so you have to install also this library manually.</p>
 <h1 id='add-edit-a-section' class='heading'>Add/Edit a section</h1>
 
 <p>You can add a section to a block with the function <code>addSectionToBlock(withBlockId:elements:success:failure:)</code>. To call this function you need to create an array of elements confrom to <code>MBUploadableElementProtocol</code>. To create it use the <code><a href="Structs/MBUploadableElementsFactory.html">MBUploadableElementsFactory</a></code> that is created. A MBUploadableElementsFactory is allocated with a locale identifier and creates object with this locale identifier. All the integrity controls of the server are still present in the APIs, you will find the description of the error in the object passed to the failure block. Below an example code to create a section. </p>

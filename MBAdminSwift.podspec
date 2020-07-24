@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
   spec.version      = "1.0.6"
   spec.summary      = "A package that extends the MBurger SDK."
   spec.description  = "With MBAdmin you can edit sections of MBurger."
-  spec.homepage     = "https://github.com/Mumble-SRL/MBAdmin"
+  spec.homepage     = "https://github.com/Mumble-SRL/MBAdminSwift"
 
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
@@ -63,7 +63,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/Mumble-SRL/MBAdmin.git", :tag => "1.0.6" }
+  spec.source       = { :git => "https://github.com/Mumble-SRL/MBAdminSwift.git", :tag => "1.0.6" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

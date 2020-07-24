@@ -14,7 +14,7 @@ xcodebuild_arguments:
 
 author: Mumble
 author_url: https://mumbleideas.it/
-github_url: https://github.com/Mumble-SRL/MBAdmin
+github_url: https://github.com/Mumble-SRL/MBAdminSwift
 
 theme: fullwidth
 
