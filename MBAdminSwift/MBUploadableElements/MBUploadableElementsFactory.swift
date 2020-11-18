@@ -79,6 +79,32 @@ public struct MBUploadableElementsFactory {
         return MBUploadableFilesElement(elementName: name, localeIdentifier: localeIdentifier, fileUrls: files)
     }
     
+    /// Creates a relation element with the data for the relation.
+    /// - Parameters:
+    ///   - name: The name of the element.
+    ///   - blockId: The id of the block for the relation.
+    ///   - sectionId: The id of the section for the relation.
+    /// - Returns: A MBUploadableRelationElement.
+    public func createRelationElement(name: String,
+                                      blockId: Int,
+                                      sectionId: Int) -> MBUploadableRelationElement {
+        return createRelationElement(name: name,
+                                     blockId: blockId,
+                                     sectionIds: [sectionId])
+    }
+    
+    /// Creates a relation element with the data for the relation.
+    /// - Parameters:
+    ///   - name: The name of the element.
+    ///   - blockId: The id of the block for the relation.
+    ///   - sectionIds: The ids of the sections for the relation.
+    /// - Returns: A MBUploadableRelationElement.
+    public func createRelationElement(name: String,
+                                      blockId: Int,
+                                      sectionIds: [Int]) -> MBUploadableRelationElement {
+        return MBUploadableRelationElement(elementName: name, localeIdentifier: localeIdentifier, sectionIds: sectionIds)
+    }
+
     /// Creates a multiple element with an array of selected values.
     /// - Parameters:
     ///   - name: The name of the element.
