@@ -2,9 +2,12 @@
 <img src="https://raw.githubusercontent.com/Mumble-SRL/MBurgerSwift/master/Images/mburger-icon.png" alt="MBurger Logo" title="MBurger Logo">
 </p>
 
-![Test Status](https://img.shields.io/badge/documentation-100%25-brightgreen.svg)
-![License: MIT](https://img.shields.io/badge/pod-v1.0.1-blue.svg)
-[![CocoaPods](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](LICENSE)
+[![Documentation](https://img.shields.io/badge/documentation-100%25-brightgreen.svg)](https://github.com/Mumble-SRL/MBAdminSwift/tree/master/docs)
+[![](https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat)](https://swift.org/package-manager/)
+![Cocoapods](https://img.shields.io/badge/pod-v1.0.6-blue.svg)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![License](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](LICENSE)
+
 
 
 # MBAdmin
