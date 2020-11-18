@@ -51,16 +51,7 @@ public struct MBUploadableElementsFactory {
     public func createImagesElement(name: String, images: [UIImage], compressionQuality: CGFloat = 1) -> MBUploadableImagesElement {
         return MBUploadableImagesElement(elementName: name, localeIdentifier: localeIdentifier, images: images, compressionQuality: compressionQuality)
     }
-    
-    /// Creates a checkbox element with a bool value.
-    /// - Parameters:
-    ///   - name: The name of the element.
-    ///   - value: The value of the element.
-    /// - Returns: A MBUploadableCheckboxElement.
-    public func createCheckboxElement(name: String, value: Bool) -> MBUploadableCheckboxElement {
-        return MBUploadableCheckboxElement(elementName: name, localeIdentifier: localeIdentifier, value: value)
-    }
-    
+        
     /// Creates a file element with a single file.
     /// - Parameters:
     ///   - name: The name of the element.
@@ -79,6 +70,15 @@ public struct MBUploadableElementsFactory {
         return MBUploadableFilesElement(elementName: name, localeIdentifier: localeIdentifier, fileUrls: files)
     }
     
+    /// Creates a checkbox element with a bool value.
+    /// - Parameters:
+    ///   - name: The name of the element.
+    ///   - value: The value of the element.
+    /// - Returns: A MBUploadableCheckboxElement.
+    public func createCheckboxElement(name: String, value: Bool) -> MBUploadableCheckboxElement {
+        return MBUploadableCheckboxElement(elementName: name, localeIdentifier: localeIdentifier, value: value)
+    }
+
     /// Creates a relation element with the data for the relation.
     /// - Parameters:
     ///   - name: The name of the element.
@@ -105,6 +105,15 @@ public struct MBUploadableElementsFactory {
         return MBUploadableRelationElement(elementName: name, localeIdentifier: localeIdentifier, sectionIds: sectionIds)
     }
 
+    /// Creates a dropdown element with a selected value.
+    /// - Parameters:
+    ///   - name: The name of the element.
+    ///   - value: The value of the element.
+    /// - Returns: A MBUploadableDropdownElement.
+    public func createDropdownElement(name: String, value: String) -> MBUploadableDropdownElement {
+        return MBUploadableDropdownElement(elementName: name, localeIdentifier: localeIdentifier, value: value)
+    }
+
     /// Creates a multiple element with an array of selected values.
     /// - Parameters:
     ///   - name: The name of the element.
@@ -112,6 +121,15 @@ public struct MBUploadableElementsFactory {
     /// - Returns: A MBUploadableMultipleElement.
     public func createMultipleElement(name: String, values: [String]) -> MBUploadableMultipleElement {
         return MBUploadableMultipleElement(elementName: name, localeIdentifier: localeIdentifier, values: values)
+    }
+
+    /// Creates a color element with a color.
+    /// - Parameters:
+    ///   - name: The name of the element.
+    ///   - color: The color of the element.
+    /// - Returns: A MBUploadableMultipleElement.
+    public func createColorElement(name: String, color: UIColor) -> MBUploadableColorElement {
+        return MBUploadableColorElement(elementName: name, localeIdentifier: localeIdentifier, color: color)
     }
 
 }
