@@ -17,21 +17,33 @@ public struct MBAdmin {
     /// - Parameters:
     ///   - blockId: The `id` of the block
     ///   - elements: An `Array` of the elements to upload. They must conform to MBUplodableElementProtocol
+    ///   - visibilitySettings: This property will tell MBurger the visibility settings for the section
+    ///   - pushSettings: This property will tell MBurger if it should send a push notification when the section is published
     ///   - success: A block that will be called when the request ends successfully. This block has no return value and takes one argument.
     ///   - sectionId: The `id` of the created section.
     ///   - failure: A block that will be called when the request ends incorrectly. This block has no return value and takes one argument.
     ///   - error: The error describing the error that occurred.
     public static func addSectionToBlock(withBlockId blockId: Int,
                                          elements: [MBUplodableElement],
+                                         visibilitySettings: MBAdminVisibilitySettings? = nil,
+                                         pushSettings: MBAdminPushSettings? = nil,
                                          success: @escaping(_ sectionId: Int) -> Void,
                                          failure: @escaping(_ error: Error) -> Void) {
         var multipartForms = [MBMultipartForm]()
+        
+        if let visibilitySettings = visibilitySettings {
+            multipartForms.append(contentsOf: visibilitySettings.toForm())
+        }
+        if let pushSettings = pushSettings {
+           multipartForms.append(contentsOf: pushSettings.toForm())
+        }
+
         for element in elements {
             if let formElement = element.toForm() {
                 formElement.forEach({ multipartForms.append($0) })
             }
         }
-        
+                
         let apiName = String(format: "blocks/%ld/sections", blockId)
         MBApiManager.upload(withToken: MBManager.shared.apiToken,
                             locale: MBManager.shared.localeString,
@@ -52,14 +64,26 @@ public struct MBAdmin {
     /// - Parameters:
     ///   - id: The `id` of the section.
     ///   - elements: An `Array` of the elements to upload. They must conform to MBUplodableElementProtocol.
+    ///   - visibilitySettings: This property will tell MBurger the visibility settings for the section
+    ///   - pushSettings: This property will tell MBurger if it should send a push notification when the section is published
     ///   - success: A block that will be called when the request ends successfully. This block has no return value and takes no argument.
     ///   - failure: A block that will be called when the request ends incorrectly. This block has no return value and takes one argument.
     ///   - error: The error describing the error that occurred.
     public static func editSection(withSectionId id: Int,
                                    elements: [MBUplodableElement],
+                                   visibilitySettings: MBAdminVisibilitySettings? = nil,
+                                   pushSettings: MBAdminPushSettings? = nil,
                                    success: @escaping() -> Void,
                                    failure: @escaping(_ error: Error) -> Void) {
         var multipartForms = [MBMultipartForm]()
+        
+        if let visibilitySettings = visibilitySettings {
+            multipartForms.append(contentsOf: visibilitySettings.toForm())
+        }
+        if let pushSettings = pushSettings {
+           multipartForms.append(contentsOf: pushSettings.toForm())
+        }
+
         for element in elements {
             if let formElements = element.toForm() {
                 formElements.forEach({ multipartForms.append($0) })

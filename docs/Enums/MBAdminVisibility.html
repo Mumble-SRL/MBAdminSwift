@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MBUplodableElement Protocol Reference</title>
+    <title>MBAdminVisibility Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Protocol/MBUplodableElement" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Enum/MBAdminVisibility" class="dashAnchor"></a>
 
-    <a title="MBUplodableElement Protocol Reference"></a>
+    <a title="MBAdminVisibility Enumeration Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">MBAdminSwift Reference</a>
       <img class="carat" src="../img/carat.png" />
-      MBUplodableElement Protocol Reference
+      MBAdminVisibility Enumeration Reference
     </p>
 
     <div class="content-wrapper">
@@ -128,15 +128,15 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>MBUplodableElement</h1>
+            <h1>MBAdminVisibility</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">MBUplodableElement</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">MBAdminVisibility</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
 
                 </div>
               </div>
-            <p>A protocol to which all MBUploadableElement needs to be conform, it has all the basic data that a MBUplodableElement needs.</p>
+            <p>The possible visibility values for a section.</p>
 
           </div>
         </section>
@@ -148,9 +148,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MBAdminSwift18MBUplodableElementP16localeIdentifierSSvp"></a>
-                    <a name="//apple_ref/swift/Property/localeIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MBAdminSwift18MBUplodableElementP16localeIdentifierSSvp">localeIdentifier</a>
+                    <a name="/s:12MBAdminSwift0A10VisibilityO5draftyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/draft" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MBAdminSwift0A10VisibilityO5draftyA2CmF">draft</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -158,14 +158,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The locale of the element. This is needed to construct the parameter name.</p>
+                        <p>The section is published in draft.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">localeIdentifier</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">draft</span></code></pre>
 
                         </div>
                       </div>
@@ -175,9 +175,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MBAdminSwift18MBUplodableElementP11elementNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/elementName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MBAdminSwift18MBUplodableElementP11elementNameSSvp">elementName</a>
+                    <a name="/s:12MBAdminSwift0A10VisibilityO7visibleyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/visible" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MBAdminSwift0A10VisibilityO7visibleyA2CmF">visible</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -185,14 +185,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name/key of the element.</p>
+                        <p>The section is published as visible.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">elementName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">visible</span></code></pre>
 
                         </div>
                       </div>
@@ -202,9 +202,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MBAdminSwift18MBUplodableElementP6toFormSay012MBNetworkingB0011MBMultipartF0CGSgyF"></a>
-                    <a name="//apple_ref/swift/Method/toForm()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MBAdminSwift18MBUplodableElementP6toFormSay012MBNetworkingB0011MBMultipartF0CGSgyF">toForm()</a>
+                    <a name="/s:12MBAdminSwift0A10VisibilityO9scheduledyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/scheduled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MBAdminSwift0A10VisibilityO9scheduledyA2CmF">scheduled</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -212,48 +212,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts the element to an array of MBMultipartForm representing it.</p>
+                        <p>The section is published as scheduled.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">toForm</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">MBMultipartForm</span><span class="p">]?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>An optional array of MBMultipartForm objects.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MBAdminSwift18MBUplodableElementPAAE13parameterNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/parameterName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MBAdminSwift18MBUplodableElementPAAE13parameterNameSSvp">parameterName</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the element, used when the element will be passed to the api.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">parameterName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">scheduled</span></code></pre>
 
                         </div>
                       </div>

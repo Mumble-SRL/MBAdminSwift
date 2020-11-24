@@ -93,7 +93,24 @@
             <a class="nav-group-name-link" href="../Other%20Classes.html">Other Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBAdminPushSettings.html">MBAdminPushSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBAdminVisibilitySettings.html">MBAdminVisibilitySettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MBUploadableDropdownElement.html">MBUploadableDropdownElement</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/MBUploadableMultipleElement.html">MBUploadableMultipleElement</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other%20Enums.html">Other Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MBAdminVisibility.html">MBAdminVisibility</a>
               </li>
             </ul>
           </li>
@@ -388,68 +405,6 @@ The locale is initialized with the factory and passed to all the objects. You ca
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MBAdminSwift27MBUploadableElementsFactoryV21createCheckboxElement4name5valueAA0cgH0VSS_SbtF"></a>
-                    <a name="//apple_ref/swift/Method/createCheckboxElement(name:value:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MBAdminSwift27MBUploadableElementsFactoryV21createCheckboxElement4name5valueAA0cgH0VSS_SbtF">createCheckboxElement(name:<wbr>value:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a checkbox element with a bool value.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createCheckboxElement</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MBUploadableCheckboxElement.html">MBUploadableCheckboxElement</a></span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>name</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The name of the element.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>value</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The value of the element.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A MBUploadableCheckboxElement.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:12MBAdminSwift27MBUploadableElementsFactoryV17createFileElement4name4fileAA0c5FilesH0VSS_10Foundation3URLVtF"></a>
                     <a name="//apple_ref/swift/Method/createFileElement(name:file:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:12MBAdminSwift27MBUploadableElementsFactoryV17createFileElement4name4fileAA0c5FilesH0VSS_10Foundation3URLVtF">createFileElement(name:<wbr>file:<wbr>)</a>
@@ -567,6 +522,68 @@ The locale is initialized with the factory and passed to all the objects. You ca
                       <div>
                         <h4>Return Value</h4>
                         <p>A MBUploadableFilesElement.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MBAdminSwift27MBUploadableElementsFactoryV21createCheckboxElement4name5valueAA0cgH0VSS_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/createCheckboxElement(name:value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MBAdminSwift27MBUploadableElementsFactoryV21createCheckboxElement4name5valueAA0cgH0VSS_SbtF">createCheckboxElement(name:<wbr>value:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a checkbox element with a bool value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createCheckboxElement</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MBUploadableCheckboxElement.html">MBUploadableCheckboxElement</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the element.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value of the element.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A MBUploadableCheckboxElement.</p>
                       </div>
                     </section>
                   </div>
@@ -726,6 +743,68 @@ The locale is initialized with the factory and passed to all the objects. You ca
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:12MBAdminSwift27MBUploadableElementsFactoryV21createDropdownElement4name5valueAA0cgH0CSS_SStF"></a>
+                    <a name="//apple_ref/swift/Method/createDropdownElement(name:value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MBAdminSwift27MBUploadableElementsFactoryV21createDropdownElement4name5valueAA0cgH0CSS_SStF">createDropdownElement(name:<wbr>value:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a dropdown element with a selected value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createDropdownElement</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/MBUploadableDropdownElement.html">MBUploadableDropdownElement</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the element.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value of the element.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A MBUploadableDropdownElement.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:12MBAdminSwift27MBUploadableElementsFactoryV21createMultipleElement4name6valuesAA0cgH0CSS_SaySSGtF"></a>
                     <a name="//apple_ref/swift/Method/createMultipleElement(name:values:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:12MBAdminSwift27MBUploadableElementsFactoryV21createMultipleElement4name6valuesAA0cgH0CSS_SaySSGtF">createMultipleElement(name:<wbr>values:<wbr>)</a>
@@ -785,6 +864,118 @@ The locale is initialized with the factory and passed to all the objects. You ca
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MBAdminSwift27MBUploadableElementsFactoryV18createColorElement4name5colorAA0cgH0VSS_So7UIColorCtF"></a>
+                    <a name="//apple_ref/swift/Method/createColorElement(name:color:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MBAdminSwift27MBUploadableElementsFactoryV18createColorElement4name5colorAA0cgH0VSS_So7UIColorCtF">createColorElement(name:<wbr>color:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a color element with a color.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createColorElement</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MBUploadableColorElement.html">MBUploadableColorElement</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the element.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>color</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color of the element.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A MBUploadableMultipleElement.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MBAdminSwift27MBUploadableElementsFactoryV17createSlugElement4slugAA0c4TextH0VSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/createSlugElement(slug:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MBAdminSwift27MBUploadableElementsFactoryV17createSlugElement4slugAA0c4TextH0VSS_tF">createSlugElement(slug:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a slug element.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createSlugElement</span><span class="p">(</span><span class="nv">slug</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/MBUploadableTextElement.html">MBUploadableTextElement</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>slug</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value of the slug.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A MBUploadableTextElement representing the slug.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -793,7 +984,7 @@ The locale is initialized with the factory and passed to all the objects. You ca
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2020-11-18)</p>
+      <p>&copy; 2020 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2020-11-24)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
