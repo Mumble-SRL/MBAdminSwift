@@ -132,4 +132,12 @@ public struct MBUploadableElementsFactory {
         return MBUploadableColorElement(elementName: name, localeIdentifier: localeIdentifier, color: color)
     }
 
+    /// Creates a slug element.
+    /// - Parameters:
+    ///   - slug: The value of the slug.
+    /// - Returns: A MBUploadableTextElement representing the slug.
+    public func createSlugElement(slug: String) -> MBUploadableTextElement {
+        return MBUploadableTextElement(elementName: "mburger_slug", localeIdentifier: localeIdentifier, text: slug)
+    }
+
 }

@@ -22,6 +22,8 @@
 		ECAAD36D24C973A1006E2EA3 /* MBUploadableMultipleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAD36C24C973A1006E2EA3 /* MBUploadableMultipleElement.swift */; };
 		ECC1713124C71A8000F45662 /* MBUploadableColorElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1713024C71A8000F45662 /* MBUploadableColorElement.swift */; };
 		ECC1713324C71C4C00F45662 /* MBUploadableRelationElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1713224C71C4C00F45662 /* MBUploadableRelationElement.swift */; };
+		ECDC3490256D62F200B921B8 /* MBAdminPushSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDC348F256D62F200B921B8 /* MBAdminPushSettings.swift */; };
+		ECDC3494256D66A500B921B8 /* MBAdminVisibilitySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDC3493256D66A500B921B8 /* MBAdminVisibilitySettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		ECAAD36C24C973A1006E2EA3 /* MBUploadableMultipleElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBUploadableMultipleElement.swift; sourceTree = "<group>"; };
 		ECC1713024C71A8000F45662 /* MBUploadableColorElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBUploadableColorElement.swift; sourceTree = "<group>"; };
 		ECC1713224C71C4C00F45662 /* MBUploadableRelationElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBUploadableRelationElement.swift; sourceTree = "<group>"; };
+		ECDC348F256D62F200B921B8 /* MBAdminPushSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBAdminPushSettings.swift; sourceTree = "<group>"; };
+		ECDC3493256D66A500B921B8 /* MBAdminVisibilitySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBAdminVisibilitySettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 				D2766670236199CA0086D5D8 /* MBAdminSwift.h */,
 				D2766671236199CA0086D5D8 /* Info.plist */,
 				D2C5384E2361A33900AF68D9 /* MBAdmin.swift */,
+				ECDC348F256D62F200B921B8 /* MBAdminPushSettings.swift */,
+				ECDC3493256D66A500B921B8 /* MBAdminVisibilitySettings.swift */,
 				D2C5385C2361A41E00AF68D9 /* MBUploadableElements */,
 			);
 			path = MBAdminSwift;
@@ -309,7 +315,9 @@
 				D2C5385A2361A35100AF68D9 /* MBUploadableElementsFactory.swift in Sources */,
 				ECC1713124C71A8000F45662 /* MBUploadableColorElement.swift in Sources */,
 				EC6F115925652A5500223B2E /* MBUploadableDropdownElement.swift in Sources */,
+				ECDC3494256D66A500B921B8 /* MBAdminVisibilitySettings.swift in Sources */,
 				ECC1713324C71C4C00F45662 /* MBUploadableRelationElement.swift in Sources */,
+				ECDC3490256D62F200B921B8 /* MBAdminPushSettings.swift in Sources */,
 				D2C538572361A34C00AF68D9 /* MBUploadableFilesElement.swift in Sources */,
 				D2C5384F2361A33900AF68D9 /* MBAdmin.swift in Sources */,
 				D2C5385B2361A35100AF68D9 /* MBUploadableCheckboxElement.swift in Sources */,
