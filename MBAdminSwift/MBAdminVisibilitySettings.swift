@@ -37,6 +37,24 @@ public class MBAdminVisibilitySettings: NSObject {
         self.availableAt = availableAt
     }
     
+    /// Creates and initializes a `MBAdminVisibilitySettings` with the visible option
+    public static func visible() -> MBAdminVisibilitySettings {
+        return MBAdminVisibilitySettings(visibility: .visible)
+    }
+    
+    /// Creates and initializes a `MBAdminVisibilitySettings` with the draft option
+    public static func draft() -> MBAdminVisibilitySettings {
+        return MBAdminVisibilitySettings(visibility: .draft)
+    }
+
+    /// Creates and initializes a `MBAdminVisibilitySettings` with the scheduled option
+    /// - Parameters:
+    ///   - availableAt: The availability date of the section
+    public static func scheduled(availableAt: Date) -> MBAdminVisibilitySettings {
+        return MBAdminVisibilitySettings(visibility: .scheduled,
+                                         availableAt: availableAt)
+    }
+
     /// Converts this object to a multipart form
     internal func toForm() -> [MBMultipartForm] {
         var forms = [MBMultipartForm]()
