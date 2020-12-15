@@ -31,10 +31,6 @@ public class MBUploadableDropdownElement: MBUplodableElement {
         self.value = value
     }
     
-    fileprivate func parameterName(forIndex index: Int) -> String {
-        return String(format: "%@[%ld]", parameterName, index)
-    }
-
     /// Converts the element to an array of MBMultipartForm representing it.
     /// - Returns: An optional array of MBMultipartForm objects.
     public func toForm() -> [MBMultipartForm]? {
