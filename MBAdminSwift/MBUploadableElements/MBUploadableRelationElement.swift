@@ -32,7 +32,7 @@ public struct MBUploadableRelationElement: MBUplodableElement {
     }
     
     fileprivate func parameterName(forIndex index: Int) -> String {
-        return String(format: "elements[%@][%ld]", elementName, index)
+        return String(format: "%@[%ld]", elementName, index)
     }
 
     /// Converts the element to an array of MBMultipartForm representing it.
