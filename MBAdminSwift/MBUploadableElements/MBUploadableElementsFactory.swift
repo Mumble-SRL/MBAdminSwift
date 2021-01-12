@@ -70,6 +70,24 @@ public struct MBUploadableElementsFactory {
         return MBUploadableFilesElement(elementName: name, localeIdentifier: localeIdentifier, fileUrls: files)
     }
     
+    /// Creates a media element with a single media.
+    /// - Parameters:
+    ///   - name: The name of the element.
+    ///   - mediaUuid: The UUID of the MBurger media.
+    /// - Returns: A MBUploadableMediaElement.
+    public func createMediaElement(name: String, mediaUuid: UUID) -> MBUploadableMediaElement {
+        return MBUploadableMediaElement(elementName: name, localeIdentifier: localeIdentifier, mediaUuids: [mediaUuid])
+    }
+    
+    /// Creates a file element with an array of media.
+    /// - Parameters:
+    ///   - name: The name of the element.
+    ///   - mediaUuids: The uuids of the media.
+    /// - Returns: A MBUploadableMediaElement.
+    public func createMediaElement(name: String, mediaUuids: [UUID]) -> MBUploadableMediaElement {
+        return MBUploadableMediaElement(elementName: name, localeIdentifier: localeIdentifier, mediaUuids: mediaUuids)
+    }
+
     /// Creates a checkbox element with a bool value.
     /// - Parameters:
     ///   - name: The name of the element.

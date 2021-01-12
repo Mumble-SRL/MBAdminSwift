@@ -12,6 +12,7 @@ import MBurgerSwift
 
 /// Manages the calls to the MBurger admin APIs.
 public struct MBAdmin {
+    // MARK: - Sections
     
     /// Add a section to the block with the specified id.
     /// - Parameters:
@@ -150,4 +151,39 @@ public struct MBAdmin {
             failure(error)
         })
     }
+    
+    //TODO: comment
+    public static func uploadMediaImage(image: UIImage,
+                                        compressionQuality: CGFloat = 1.0,
+                                        success: @escaping() -> Void,
+                                        failure: @escaping(_ error: Error) -> Void) {
+        self.uploadMediaImages(images: [image],
+                               success: success,
+                               failure: failure)
+    }
+
+    //TODO: comment
+    public static func uploadMediaImages(images: [UIImage],
+                                         compressionQuality: CGFloat = 1.0,
+                                         success: @escaping() -> Void,
+                                         failure: @escaping(_ error: Error) -> Void) {
+        //TODO:
+    }
+
+    //TODO: comment
+    public static func uploadMedia(media: URL,
+                                   success: @escaping() -> Void,
+                                   failure: @escaping(_ error: Error) -> Void) {
+        self.uploadMedia(media: [media],
+                         success: success,
+                         failure: failure)
+    }
+
+    //TODO: comment
+    public static func uploadMedia(media: [URL],
+                                   success: @escaping() -> Void,
+                                   failure: @escaping(_ error: Error) -> Void) {
+        //TODO:
+    }
+
 }

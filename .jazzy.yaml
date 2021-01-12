@@ -1,4 +1,5 @@
 
+
 clean: true
 objc: false
 readme: Readme.md
@@ -30,8 +31,9 @@ custom_categories:
     children:
     - MBUplodableElementProtocol
     - MBUploadableCheckboxElement
-    - MBUploadableFilesElement
     - MBUploadableImagesElement
+    - MBUploadableFilesElement
+    - MBUploadableMediaElement
     - MBUploadableTextElement
     - MBUploadableColorElement
     - MBUploadableRelationElement

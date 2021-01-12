@@ -38,7 +38,7 @@ public struct MBUploadableImagesElement: MBUplodableElement {
         return folderPath
     }
     
-    /// Initializes a text element with the name, the locale and a text.
+    /// Initializes an images element with the name, the locale and the images.
     /// - Parameters:
     ///   - elementName: The name/key of the element.
     ///   - localeIdentifier: The locale of the element.

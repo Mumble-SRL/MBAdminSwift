@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MBUplodableElement Protocol Reference</title>
+    <title>MBUploadableMediaElement Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Protocol/MBUplodableElement" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Struct/MBUploadableMediaElement" class="dashAnchor"></a>
 
-    <a title="MBUplodableElement Protocol Reference"></a>
+    <a title="MBUploadableMediaElement Structure Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">MBAdminSwift Reference</a>
       <img class="carat" src="../img/carat.png" />
-      MBUplodableElement Protocol Reference
+      MBUploadableMediaElement Structure Reference
     </p>
 
     <div class="content-wrapper">
@@ -131,15 +131,15 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>MBUplodableElement</h1>
+            <h1>MBUploadableMediaElement</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">MBUplodableElement</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MBUploadableMediaElement</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/MBUplodableElement.html">MBUplodableElement</a></span></code></pre>
 
                 </div>
               </div>
-            <p>A protocol to which all MBUploadableElement needs to be conform, it has all the basic data that a MBUplodableElement needs.</p>
+            <p>An uploadable element representing some medias.</p>
 
           </div>
         </section>
@@ -151,9 +151,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MBAdminSwift18MBUplodableElementP16localeIdentifierSSvp"></a>
+                    <a name="/s:12MBAdminSwift24MBUploadableMediaElementV16localeIdentifierSSvp"></a>
                     <a name="//apple_ref/swift/Property/localeIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MBAdminSwift18MBUplodableElementP16localeIdentifierSSvp">localeIdentifier</a>
+                    <a class="token" href="#/s:12MBAdminSwift24MBUploadableMediaElementV16localeIdentifierSSvp">localeIdentifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -168,7 +168,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">localeIdentifier</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">localeIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -178,9 +178,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MBAdminSwift18MBUplodableElementP11elementNameSSvp"></a>
+                    <a name="/s:12MBAdminSwift24MBUploadableMediaElementV11elementNameSSvp"></a>
                     <a name="//apple_ref/swift/Property/elementName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MBAdminSwift18MBUplodableElementP11elementNameSSvp">elementName</a>
+                    <a class="token" href="#/s:12MBAdminSwift24MBUploadableMediaElementV11elementNameSSvp">elementName</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -195,7 +195,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">elementName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">elementName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -205,9 +205,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:12MBAdminSwift18MBUplodableElementP6toFormSay012MBNetworkingB0011MBMultipartF0CGSgyF"></a>
+                    <a name="/s:12MBAdminSwift24MBUploadableMediaElementV9mediaUuidSay10Foundation4UUIDVGvp"></a>
+                    <a name="//apple_ref/swift/Property/mediaUuid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MBAdminSwift24MBUploadableMediaElementV9mediaUuidSay10Foundation4UUIDVGvp">mediaUuid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The array of uuid of the media.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mediaUuid</span><span class="p">:</span> <span class="p">[</span><span class="kt">UUID</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MBAdminSwift24MBUploadableMediaElementV6toFormSay012MBNetworkingB0011MBMultipartG0CGSgyF"></a>
                     <a name="//apple_ref/swift/Method/toForm()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MBAdminSwift18MBUplodableElementP6toFormSay012MBNetworkingB0011MBMultipartF0CGSgyF">toForm()</a>
+                    <a class="token" href="#/s:12MBAdminSwift24MBUploadableMediaElementV6toFormSay012MBNetworkingB0011MBMultipartG0CGSgyF">toForm()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -222,43 +249,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">toForm</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">MBMultipartForm</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toForm</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">MBMultipartForm</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
                         <p>An optional array of MBMultipartForm objects.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12MBAdminSwift18MBUplodableElementPAAE13parameterNameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/parameterName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12MBAdminSwift18MBUplodableElementPAAE13parameterNameSSvp">parameterName</a>
-                    </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The name of the element, used when the element will be passed to the api.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">parameterName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
