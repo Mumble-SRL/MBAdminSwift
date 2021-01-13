@@ -24,19 +24,9 @@ public struct MBUploadableImagesElement: MBUplodableElement {
     
     /// The compression quality used to encode the image in jpg.
     public let compressionQuality: CGFloat
-    
-    /// The folder in which the images are saved.
-    private var imageFolderPath: String = {
-        let path = String(format: "Images_%f", Date().timeIntervalSince1970)
-        return path
-    }()
-    
-    /// The URL of the directory.
-    private var directoryURL: URL {
-        let cachesFilePath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first
-        let folderPath = URL(fileURLWithPath: cachesFilePath ?? "").appendingPathComponent(imageFolderPath)
-        return folderPath
-    }
+        
+    /// Utility class used to save images in the caches directory
+    private let imagesUtilities = MBAdminImagesUtilities()
     
     /// Initializes an images element with the name, the locale and the images.
     /// - Parameters:
@@ -50,11 +40,11 @@ public struct MBUploadableImagesElement: MBUplodableElement {
         self.images = images
         self.compressionQuality = compressionQuality
         
-        createDirectory(atPath: directoryURL)
+        imagesUtilities.createDirectory(atPath: imagesUtilities.directoryURL)
         
         self.images.enumerated().forEach { (index, image) in
-            let filePath = self.fileURL(forIndex: index)
-            write(atPath: filePath, data: image.jpegData(compressionQuality: compressionQuality))
+            let filePath = imagesUtilities.fileURL(forIndex: index)
+            imagesUtilities.write(atPath: filePath, data: image.jpegData(compressionQuality: compressionQuality))
         }
     }
     
@@ -65,38 +55,14 @@ public struct MBUploadableImagesElement: MBUplodableElement {
         if images.count != 0 {
             multipartElements = []
             self.images.enumerated().forEach { (index, _) in
-                let filePath = self.fileURL(forIndex: index)
+                let filePath = imagesUtilities.fileURL(forIndex: index)
                 multipartElements?.append(MBMultipartForm(name: parameterName(forIndex: index), url: filePath, mimeType: "image/jpeg"))
             }
         }
         return multipartElements
     }
     
-    fileprivate func createDirectory(atPath path: URL) {
-        do {
-            try FileManager.default.createDirectory(at: path, withIntermediateDirectories: true, attributes: nil)
-        } catch let error {
-            print(error.localizedDescription)
-        }
-    }
-    
-    fileprivate func write(atPath path: URL, data: Data?) {
-        do {
-            try data?.write(to: path, options: .atomic)
-        } catch let error {
-            print(error.localizedDescription)
-        }
-    }
-    
-    fileprivate func fileURL(forIndex index: Int) -> URL {
-        return directoryURL.appendingPathComponent(fileName(forIndex: index))
-    }
-    
-    fileprivate func fileName(forIndex index: Int) -> String {
-        return String(format: "Images_%d.jpg", index)
-    }
-    
-    fileprivate func parameterName(forIndex index: Int) -> String {
+    private func parameterName(forIndex index: Int) -> String {
         return String(format: "%@[%ld]", parameterName, index)
     }
 }

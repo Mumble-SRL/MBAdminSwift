@@ -38,7 +38,8 @@ public struct MBUploadableMediaElement: MBUplodableElement {
         if mediaUuids.count != 0 {
             multipartElements = []
             do {
-                let serializedData = try JSONSerialization.data(withJSONObject: mediaUuids.map({ $0.uuidString }), options: [])
+                let mediaUuidStrings = mediaUuids.map({ $0.uuidString.lowercased() })
+                let serializedData = try JSONSerialization.data(withJSONObject: mediaUuidStrings, options: [])
                 multipartElements?.append(MBMultipartForm(name: parameterName, data: serializedData))
             } catch {
             

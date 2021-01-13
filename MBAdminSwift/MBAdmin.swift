@@ -53,8 +53,22 @@ public struct MBAdmin {
                             multipartParameters: multipartForms,
                             development: MBManager.shared.development) { (response) in
                                 switch response {
-                                case .success(let succ):
-                                    print(succ)
+                                case .success(_, let data):
+                                    guard let data = data else {
+                                        failure(MBError.customError(reason: "Can't find response"))
+                                        return
+                                    }
+                                    guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else {
+                                        failure(MBError.customError(reason: "Can't decode response"))
+                                        return
+                                    }
+                                    guard let jsonDictionary = json as? [String: Any],
+                                          let body = jsonDictionary["body"] as? [String: Any],
+                                          let sectionId = body["id"] as? Int else {
+                                        failure(MBError.customError(reason: "Can't find section id"))
+                                        return
+                                    }
+                                    success(sectionId)
                                 case .error(let error):
                                     failure(error)
                                 }
@@ -130,6 +144,154 @@ public struct MBAdmin {
     }
     
     // MARK: - Media
+        
+    /// Uploads an image to the media center of MBurger.
+    /// - Parameters:
+    ///   - image: The `image` that will be uploaded.
+    ///   - name: On optional name for the image.
+    ///   - compressionQuality: The compression quality of the image, image data will be saved in jpg. If you want to send the image without compression use `MBAdmin.uploadMedia(...)`
+    ///   - success: A block that will be called when the request ends successfully. This block has no return value and takes no argument.
+    ///   - media: The media created in the media center of MBurger.
+    ///   - failure: A block that will be called when the request ends incorrectly. This block has no return value and takes one argument.
+    ///   - error: The error describing the error that occurred.
+    public static func uploadMediaImage(image: UIImage,
+                                        name: String? = nil,
+                                        compressionQuality: CGFloat = 1.0,
+                                        success: @escaping(_ media: MBMedia) -> Void,
+                                        failure: @escaping(_ error: Error) -> Void) {
+        var imagesNames: [String]? = nil
+        if let name = name {
+            imagesNames = [name]
+        }
+        self.uploadMediaImages(images: [image],
+                               names: imagesNames,
+                               success: { media in
+                                  guard let firstMedia = media.first else {
+                                      failure(MBError.customError(reason: "Can't find media"))
+                                      return
+                                  }
+                                  success(firstMedia)
+                               },
+                               failure: failure)
+    }
+
+    /// Uploads an array of images to the media center of MBurger.
+    /// - Parameters:
+    ///   - images: The `images` that will be uploaded.
+    ///   - names: On optional array of names for the images, if it's null they will be called Image_0, Image_1, etc.
+    ///   - compressionQuality: The compression quality of the images, images data will be saved in jpg. If you want to send the image without compression use `MBAdmin.uploadMedia(...)`
+    ///   - success: A block that will be called when the request ends successfully. This block has no return value and takes no argument.
+    ///   - media: The media created in the media center of MBurger.
+    ///   - failure: A block that will be called when the request ends incorrectly. This block has no return value and takes one argument.
+    ///   - error: The error describing the error that occurred.
+    public static func uploadMediaImages(images: [UIImage],
+                                         names: [String]? = nil,
+                                         compressionQuality: CGFloat = 1.0,
+                                         success: @escaping(_ media: [MBMedia]) -> Void,
+                                         failure: @escaping(_ error: Error) -> Void) {
+        var multipartParameters = [MBMultipartForm]()
+        let imagesUtilities = MBAdminImagesUtilities()
+        imagesUtilities.createDirectory(atPath: imagesUtilities.directoryURL)
+        for (index, image) in images.enumerated() {
+            var imageName: String?
+            if let names = names,
+               index < names.count {
+                imageName = names[index]
+            }
+            var fileUrl = imagesUtilities.fileURL(forIndex: index)
+            if let imageName = imageName {
+                fileUrl = imagesUtilities.directoryURL.appendingPathComponent(imageName + ".jpg")
+            }
+            imagesUtilities.write(atPath: fileUrl, data: image.jpegData(compressionQuality: compressionQuality))
+            let parameterName = String(format: "media[%d]", index)
+            multipartParameters.append(MBMultipartForm(name: parameterName, url: fileUrl, mimeType: "image/jpeg"))
+        }
+        uploadMedia(multipartParameters: multipartParameters,
+                    success: success,
+                    failure: failure)
+    }
+
+    /// Uploads a media to the media center of MBurger.
+    /// - Parameters:
+    ///   - media: The url of the `media` that will be uploaded.
+    ///   - success: A block that will be called when the request ends successfully. This block has no return value and takes no argument.
+    ///   - media: The media created in the media center of MBurger.
+    ///   - failure: A block that will be called when the request ends incorrectly. This block has no return value and takes one argument.
+    ///   - error: The error describing the error that occurred.
+    public static func uploadMedia(media: URL,
+                                   success: @escaping(_ media: MBMedia) -> Void,
+                                   failure: @escaping(_ error: Error) -> Void) {
+        self.uploadMedia(media: [media],
+                         success: { media in
+                            guard let firstMedia = media.first else {
+                                failure(MBError.customError(reason: "Can't find media"))
+                                return
+                            }
+                            success(firstMedia)
+                         },
+                         failure: failure)
+    }
+
+    /// Uploads an array of media to the media center of MBurger.
+    /// - Parameters:
+    ///   - media: The urls of the `media` that will be uploaded.
+    ///   - success: A block that will be called when the request ends successfully. This block has no return value and takes no argument.
+    ///   - media: The media created in the media center of MBurger.
+    ///   - failure: A block that will be called when the request ends incorrectly. This block has no return value and takes one argument.
+    ///   - error: The error describing the error that occurred.
+    public static func uploadMedia(media: [URL],
+                                   success: @escaping(_ media: [MBMedia]) -> Void,
+                                   failure: @escaping(_ error: Error) -> Void) {
+        var multipartParameters = [MBMultipartForm]()
+        for (index, mediaUrl) in media.enumerated() {
+            let parameterName = String(format: "media[%d]", index)
+            multipartParameters.append(MBMultipartForm(name: parameterName, url: mediaUrl))
+        }
+        uploadMedia(multipartParameters: multipartParameters,
+                    success: success,
+                    failure: failure)
+    }
+
+    /// Uploads an array of media to the media center of MBurger, giving the multipart parameter.
+    /// It's used by the other function, calls the API and returns the data
+    /// - Parameters:
+    ///   - multipartParameters: The multipart parameters sent to the API.
+    ///   - success: A block that will be called when the request ends successfully. This block has no return value and takes no argument.
+    ///   - media: The media created in the media center of MBurger.
+    ///   - failure: A block that will be called when the request ends incorrectly. This block has no return value and takes one argument.
+    ///   - error: The error describing the error that occurred.
+    private static func uploadMedia(multipartParameters: [MBMultipartForm],
+                                    success: @escaping(_ media: [MBMedia]) -> Void,
+                                    failure: @escaping(_ error: Error) -> Void) {
+        let apiName = "media"
+        MBApiManager.upload(withToken: MBManager.shared.apiToken,
+                            locale: MBManager.shared.localeString,
+                            apiName: apiName,
+                            method: .post,
+                            multipartParameters: multipartParameters,
+                            development: MBManager.shared.development) { (response) in
+                                switch response {
+                                case .success(_, let data):
+                                    guard let data = data else {
+                                        failure(MBError.customError(reason: "Can't find response"))
+                                        return
+                                    }
+                                    guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else {
+                                        failure(MBError.customError(reason: "Can't decode response"))
+                                        return
+                                    }
+                                    guard let jsonDictionary = json as? [String: Any],
+                                          let body = jsonDictionary["body"] as? [[String: Any]] else {
+                                        failure(MBError.customError(reason: "Can't find section id"))
+                                        return
+                                    }
+                                    let media = body.map({ MBMedia(dictionary: $0) })
+                                    success(media)
+                                case .error(let error):
+                                    failure(error)
+                                }
+        }
+    }
     
     /// Remove the media (image or file) with the specified id.
     /// - Parameters:
@@ -145,45 +307,11 @@ public struct MBAdmin {
                              locale: MBManager.shared.localeString,
                              apiName: apiName,
                              method: .delete,
-                             success: { (_) in
+                             success: { _ in
                                 success()
         }, failure: { error in
             failure(error)
         })
-    }
-    
-    //TODO: comment
-    public static func uploadMediaImage(image: UIImage,
-                                        compressionQuality: CGFloat = 1.0,
-                                        success: @escaping() -> Void,
-                                        failure: @escaping(_ error: Error) -> Void) {
-        self.uploadMediaImages(images: [image],
-                               success: success,
-                               failure: failure)
-    }
-
-    //TODO: comment
-    public static func uploadMediaImages(images: [UIImage],
-                                         compressionQuality: CGFloat = 1.0,
-                                         success: @escaping() -> Void,
-                                         failure: @escaping(_ error: Error) -> Void) {
-        //TODO:
-    }
-
-    //TODO: comment
-    public static func uploadMedia(media: URL,
-                                   success: @escaping() -> Void,
-                                   failure: @escaping(_ error: Error) -> Void) {
-        self.uploadMedia(media: [media],
-                         success: success,
-                         failure: failure)
-    }
-
-    //TODO: comment
-    public static func uploadMedia(media: [URL],
-                                   success: @escaping() -> Void,
-                                   failure: @escaping(_ error: Error) -> Void) {
-        //TODO:
     }
 
 }
