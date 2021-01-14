@@ -73,10 +73,13 @@
                 <a class="nav-group-task-link" href="../Structs/MBUploadableCheckboxElement.html">MBUploadableCheckboxElement</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MBUploadableImagesElement.html">MBUploadableImagesElement</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/MBUploadableFilesElement.html">MBUploadableFilesElement</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/MBUploadableImagesElement.html">MBUploadableImagesElement</a>
+                <a class="nav-group-task-link" href="../Structs/MBUploadableMediaElement.html">MBUploadableMediaElement</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/MBUploadableTextElement.html">MBUploadableTextElement</a>
@@ -144,6 +147,15 @@
         <section class="section">
           <div class="section-content">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Sections"></a>
+                <a name="//apple_ref/swift/Section/Sections" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Sections"></a>
+                  <h3 class="section-name"><p>Sections</p>
+</h3>
+                </div>
+              </div>
               <ul class="item-container">
                 <li class="item">
                   <div>
@@ -503,6 +515,442 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:12MBAdminSwift0A0V16uploadMediaImage5image4name18compressionQuality7success7failureySo7UIImageC_SSSg12CoreGraphics7CGFloatVy07MBurgerB07MBMediaCcys5Error_pctFZ"></a>
+                    <a name="//apple_ref/swift/Method/uploadMediaImage(image:name:compressionQuality:success:failure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MBAdminSwift0A0V16uploadMediaImage5image4name18compressionQuality7success7failureySo7UIImageC_SSSg12CoreGraphics7CGFloatVy07MBurgerB07MBMediaCcys5Error_pctFZ">uploadMediaImage(image:<wbr>name:<wbr>compressionQuality:<wbr>success:<wbr>failure:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Uploads an image to the media center of MBurger.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">uploadMediaImage</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+                                    <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                    <span class="nv">compressionQuality</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+                                    <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span><span class="p">(</span><span class="n">_</span> <span class="nv">media</span><span class="p">:</span> <span class="kt">MBMedia</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
+                                    <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span><span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>image</code> that will be uploaded.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>On optional name for the image.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>compressionQuality</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The compression quality of the image, image data will be saved in jpg. If you want to send the image without compression use <code><a href="../Structs/MBAdmin.html#/s:12MBAdminSwift0A0V11uploadMedia5media7success7failurey10Foundation3URLV_y07MBurgerB07MBMediaCcys5Error_pctFZ">MBAdmin.uploadMedia(...)</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>success</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block that will be called when the request ends successfully. This block has no return value and takes no argument.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>media</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The media created in the media center of MBurger.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>failure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block that will be called when the request ends incorrectly. This block has no return value and takes one argument.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The error describing the error that occurred.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MBAdminSwift0A0V17uploadMediaImages6images5names18compressionQuality7success7failureySaySo7UIImageCG_SaySSGSg12CoreGraphics7CGFloatVySay07MBurgerB07MBMediaCGcys5Error_pctFZ"></a>
+                    <a name="//apple_ref/swift/Method/uploadMediaImages(images:names:compressionQuality:success:failure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MBAdminSwift0A0V17uploadMediaImages6images5names18compressionQuality7success7failureySaySo7UIImageCG_SaySSGSg12CoreGraphics7CGFloatVySay07MBurgerB07MBMediaCGcys5Error_pctFZ">uploadMediaImages(images:<wbr>names:<wbr>compressionQuality:<wbr>success:<wbr>failure:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Uploads an array of images to the media center of MBurger.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">uploadMediaImages</span><span class="p">(</span><span class="nv">images</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIImage</span><span class="p">],</span>
+                                     <span class="nv">names</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                     <span class="nv">compressionQuality</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+                                     <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span><span class="p">(</span><span class="n">_</span> <span class="nv">media</span><span class="p">:</span> <span class="p">[</span><span class="kt">MBMedia</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
+                                     <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span><span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>images</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>images</code> that will be uploaded.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>names</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>On optional array of names for the images, if it&rsquo;s null they will be called Image_0, Image_1, etc.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>compressionQuality</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The compression quality of the images, images data will be saved in jpg. If you want to send the image without compression use <code><a href="../Structs/MBAdmin.html#/s:12MBAdminSwift0A0V11uploadMedia5media7success7failurey10Foundation3URLV_y07MBurgerB07MBMediaCcys5Error_pctFZ">MBAdmin.uploadMedia(...)</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>success</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block that will be called when the request ends successfully. This block has no return value and takes no argument.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>media</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The media created in the media center of MBurger.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>failure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block that will be called when the request ends incorrectly. This block has no return value and takes one argument.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The error describing the error that occurred.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MBAdminSwift0A0V11uploadMedia5media7success7failurey10Foundation3URLV_y07MBurgerB07MBMediaCcys5Error_pctFZ"></a>
+                    <a name="//apple_ref/swift/Method/uploadMedia(media:success:failure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MBAdminSwift0A0V11uploadMedia5media7success7failurey10Foundation3URLV_y07MBurgerB07MBMediaCcys5Error_pctFZ">uploadMedia(media:<wbr>success:<wbr>failure:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Uploads a media to the media center of MBurger.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">uploadMedia</span><span class="p">(</span><span class="nv">media</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span>
+                               <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span><span class="p">(</span><span class="n">_</span> <span class="nv">media</span><span class="p">:</span> <span class="kt">MBMedia</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
+                               <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span><span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>media</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The media created in the media center of MBurger.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>success</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block that will be called when the request ends successfully. This block has no return value and takes no argument.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>media</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The media created in the media center of MBurger.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>failure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block that will be called when the request ends incorrectly. This block has no return value and takes one argument.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The error describing the error that occurred.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12MBAdminSwift0A0V11uploadMedia5media7success7failureySay10Foundation3URLVG_ySay07MBurgerB07MBMediaCGcys5Error_pctFZ"></a>
+                    <a name="//apple_ref/swift/Method/uploadMedia(media:success:failure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12MBAdminSwift0A0V11uploadMedia5media7success7failureySay10Foundation3URLVG_ySay07MBurgerB07MBMediaCGcys5Error_pctFZ">uploadMedia(media:<wbr>success:<wbr>failure:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Uploads an array of media to the media center of MBurger.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">uploadMedia</span><span class="p">(</span><span class="nv">media</span><span class="p">:</span> <span class="p">[</span><span class="kt">URL</span><span class="p">],</span>
+                               <span class="nv">success</span><span class="p">:</span> <span class="kd">@escaping</span><span class="p">(</span><span class="n">_</span> <span class="nv">media</span><span class="p">:</span> <span class="p">[</span><span class="kt">MBMedia</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
+                               <span class="nv">failure</span><span class="p">:</span> <span class="kd">@escaping</span><span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>media</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The media created in the media center of MBurger.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>success</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block that will be called when the request ends successfully. This block has no return value and takes no argument.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>media</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The media created in the media center of MBurger.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>failure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block that will be called when the request ends incorrectly. This block has no return value and takes one argument.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The error describing the error that occurred.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:12MBAdminSwift0A0V11deleteMedia04withD2Id7success7failureySi_yycys5Error_pctFZ"></a>
                     <a name="//apple_ref/swift/Method/deleteMedia(withMediaId:success:failure:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:12MBAdminSwift0A0V11deleteMedia04withD2Id7success7failureySi_yycys5Error_pctFZ">deleteMedia(withMediaId:<wbr>success:<wbr>failure:<wbr>)</a>
@@ -592,8 +1040,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2020-12-15)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2021 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2021-01-14)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

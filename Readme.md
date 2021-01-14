@@ -95,7 +95,64 @@ MBAdmin.deleteSection(withSectionId: SECTION_ID, success: {
 
 ```
 
-# Delete a media
+# Upload media
+
+You can upload media in 2 ways:
+
+- Uploading images, giving them names. In that case images will be converted in `jpg` (you can specify the compression quality).
+- Upload files with their URL
+
+To upload an image or multiple images:
+
+```swift
+let image1: UIImage = AN_IMAGE
+let image2: UIImage = ANOTHER_IMAGE
+
+// Upload a single image		
+MBAdmin.uploadMediaImage(image: image1,
+                         name: "Image name",
+                         success: { media in
+            
+}, failure: { error in
+            
+})
+
+// Upload multiple images
+MBAdmin.uploadMediaImages(images: [image1, image2],
+                          names: ["Image1", "Image2"],
+                          success: { media in
+            
+}, failure: { error in
+            
+})
+
+```
+To upload files with their URLs:
+
+```swift
+let file1Url: URL = AN_URL
+let file2Url: URL = ANOTHER_URL
+        
+// Upload a single file
+MBAdmin.uploadMedia(media: file1Url,
+                    success: { media in
+                                
+                    },
+                    failure: { error in
+                                
+                    })
+        
+// Upload an array of files
+MBAdmin.uploadMedia(media: [file1Url, file2Url],
+                    success: { media in
+                                
+                    },
+                    failure: { error in
+                                
+                    })
+```
+
+# Delete media
 
 You can delete a media(`MBFile`) using `deleteMedia(withMediaId:success:failure:)` that requires the id of the media to delete. The id of the media is the field id of the `MBFile`.
 
