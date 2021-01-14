@@ -19,6 +19,7 @@
 		D2C5385A2361A35100AF68D9 /* MBUploadableElementsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C538582361A35100AF68D9 /* MBUploadableElementsFactory.swift */; };
 		D2C5385B2361A35100AF68D9 /* MBUploadableCheckboxElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C538592361A35100AF68D9 /* MBUploadableCheckboxElement.swift */; };
 		EC6F115925652A5500223B2E /* MBUploadableDropdownElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6F115825652A5500223B2E /* MBUploadableDropdownElement.swift */; };
+		EC97FC0225B0348D0061A1BF /* MBAdminImagesUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97FC0125B0348D0061A1BF /* MBAdminImagesUtilities.swift */; };
 		ECA7DBB025ADFEBC0057EFBA /* MBUploadableMediaElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA7DBAF25ADFEBC0057EFBA /* MBUploadableMediaElement.swift */; };
 		ECAAD36D24C973A1006E2EA3 /* MBUploadableMultipleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAD36C24C973A1006E2EA3 /* MBUploadableMultipleElement.swift */; };
 		ECC1713124C71A8000F45662 /* MBUploadableColorElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1713024C71A8000F45662 /* MBUploadableColorElement.swift */; };
@@ -55,6 +56,7 @@
 		D2C538592361A35100AF68D9 /* MBUploadableCheckboxElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBUploadableCheckboxElement.swift; sourceTree = "<group>"; };
 		D30B77D32FA69AD16C53456C /* Pods-MBAdminSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBAdminSwift.debug.xcconfig"; path = "Target Support Files/Pods-MBAdminSwift/Pods-MBAdminSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		EC6F115825652A5500223B2E /* MBUploadableDropdownElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBUploadableDropdownElement.swift; sourceTree = "<group>"; };
+		EC97FC0125B0348D0061A1BF /* MBAdminImagesUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBAdminImagesUtilities.swift; sourceTree = "<group>"; };
 		ECA7DBAF25ADFEBC0057EFBA /* MBUploadableMediaElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBUploadableMediaElement.swift; sourceTree = "<group>"; };
 		ECAAD36C24C973A1006E2EA3 /* MBUploadableMultipleElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBUploadableMultipleElement.swift; sourceTree = "<group>"; };
 		ECC1713024C71A8000F45662 /* MBUploadableColorElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBUploadableColorElement.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				D2C5384E2361A33900AF68D9 /* MBAdmin.swift */,
 				ECDC348F256D62F200B921B8 /* MBAdminPushSettings.swift */,
 				ECDC3493256D66A500B921B8 /* MBAdminVisibilitySettings.swift */,
+				EC97FC0125B0348D0061A1BF /* MBAdminImagesUtilities.swift */,
 				D2C5385C2361A41E00AF68D9 /* MBUploadableElements */,
 			);
 			path = MBAdminSwift;
@@ -316,6 +319,7 @@
 			files = (
 				D2C538562361A34C00AF68D9 /* MBUplodableElement.swift in Sources */,
 				D2C5385A2361A35100AF68D9 /* MBUploadableElementsFactory.swift in Sources */,
+				EC97FC0225B0348D0061A1BF /* MBAdminImagesUtilities.swift in Sources */,
 				ECC1713124C71A8000F45662 /* MBUploadableColorElement.swift in Sources */,
 				EC6F115925652A5500223B2E /* MBUploadableDropdownElement.swift in Sources */,
 				ECDC3494256D66A500B921B8 /* MBAdminVisibilitySettings.swift in Sources */,

@@ -159,7 +159,7 @@ public struct MBAdmin {
                                         compressionQuality: CGFloat = 1.0,
                                         success: @escaping(_ media: MBMedia) -> Void,
                                         failure: @escaping(_ error: Error) -> Void) {
-        var imagesNames: [String]? = nil
+        var imagesNames: [String]?
         if let name = name {
             imagesNames = [name]
         }

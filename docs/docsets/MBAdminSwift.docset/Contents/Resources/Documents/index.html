@@ -212,7 +212,62 @@ You will have to use a token with write permissions to edit the sections and wit
 <span class="p">})</span>
 
 </code></pre>
-<h1 id='delete-a-media' class='heading'>Delete a media</h1>
+<h1 id='upload-media' class='heading'>Upload media</h1>
+
+<p>You can upload media in 2 ways:</p>
+
+<ul>
+<li>Uploading images, giving them names. In that case images will be converted in <code>jpg</code> (you can specify the compression quality).</li>
+<li>Upload files with their URL</li>
+</ul>
+
+<p>To upload an image or multiple images:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">image1</span><span class="p">:</span> <span class="kt">UIImage</span> <span class="o">=</span> <span class="kt">AN_IMAGE</span>
+<span class="k">let</span> <span class="nv">image2</span><span class="p">:</span> <span class="kt">UIImage</span> <span class="o">=</span> <span class="kt">ANOTHER_IMAGE</span>
+
+<span class="c1">// Upload a single image        </span>
+<span class="kt">MBAdmin</span><span class="o">.</span><span class="nf">uploadMediaImage</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="n">image1</span><span class="p">,</span>
+                         <span class="nv">name</span><span class="p">:</span> <span class="s">"Image name"</span><span class="p">,</span>
+                         <span class="nv">success</span><span class="p">:</span> <span class="p">{</span> <span class="n">media</span> <span class="k">in</span>
+
+<span class="p">},</span> <span class="nv">failure</span><span class="p">:</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+
+<span class="p">})</span>
+
+<span class="c1">// Upload multiple images</span>
+<span class="kt">MBAdmin</span><span class="o">.</span><span class="nf">uploadMediaImages</span><span class="p">(</span><span class="nv">images</span><span class="p">:</span> <span class="p">[</span><span class="n">image1</span><span class="p">,</span> <span class="n">image2</span><span class="p">],</span>
+                          <span class="nv">names</span><span class="p">:</span> <span class="p">[</span><span class="s">"Image1"</span><span class="p">,</span> <span class="s">"Image2"</span><span class="p">],</span>
+                          <span class="nv">success</span><span class="p">:</span> <span class="p">{</span> <span class="n">media</span> <span class="k">in</span>
+
+<span class="p">},</span> <span class="nv">failure</span><span class="p">:</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+
+<span class="p">})</span>
+
+</code></pre>
+
+<p>To upload files with their URLs:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">file1Url</span><span class="p">:</span> <span class="kt">URL</span> <span class="o">=</span> <span class="kt">AN_URL</span>
+<span class="k">let</span> <span class="nv">file2Url</span><span class="p">:</span> <span class="kt">URL</span> <span class="o">=</span> <span class="kt">ANOTHER_URL</span>
+
+<span class="c1">// Upload a single file</span>
+<span class="kt">MBAdmin</span><span class="o">.</span><span class="nf">uploadMedia</span><span class="p">(</span><span class="nv">media</span><span class="p">:</span> <span class="n">file1Url</span><span class="p">,</span>
+                    <span class="nv">success</span><span class="p">:</span> <span class="p">{</span> <span class="n">media</span> <span class="k">in</span>
+
+                    <span class="p">},</span>
+                    <span class="nv">failure</span><span class="p">:</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+
+                    <span class="p">})</span>
+
+<span class="c1">// Upload an array of files</span>
+<span class="kt">MBAdmin</span><span class="o">.</span><span class="nf">uploadMedia</span><span class="p">(</span><span class="nv">media</span><span class="p">:</span> <span class="p">[</span><span class="n">file1Url</span><span class="p">,</span> <span class="n">file2Url</span><span class="p">],</span>
+                    <span class="nv">success</span><span class="p">:</span> <span class="p">{</span> <span class="n">media</span> <span class="k">in</span>
+
+                    <span class="p">},</span>
+                    <span class="nv">failure</span><span class="p">:</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+
+                    <span class="p">})</span>
+</code></pre>
+<h1 id='delete-media' class='heading'>Delete media</h1>
 
 <p>You can delete a media(<code>MBFile</code>) using <code>deleteMedia(withMediaId:success:failure:)</code> that requires the id of the media to delete. The id of the media is the field id of the <code>MBFile</code>.</p>
 <pre class="highlight swift"><code><span class="kt">MBAdmin</span><span class="o">.</span><span class="nf">deleteMedia</span><span class="p">(</span><span class="nv">withMediaId</span><span class="p">:</span> <span class="kt">MEDIA_ID</span><span class="p">,</span> <span class="nv">success</span><span class="p">:</span> <span class="p">{</span>
@@ -234,8 +289,8 @@ You will have to use a token with write permissions to edit the sections and wit
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2021 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2021-01-12)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2021 <a class="link" href="https://mumbleideas.it/" target="_blank" rel="external">Mumble</a>. All rights reserved. (Last updated: 2021-01-14)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
