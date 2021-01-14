@@ -100,7 +100,7 @@ MBAdmin.deleteSection(withSectionId: SECTION_ID, success: {
 You can upload media in 2 ways:
 
 - Uploading images, giving them names. In that case images will be converted in `jpg` (you can specify the compression quality).
-- Upload files with their URL
+- Uploading files with their URL.
 
 To upload an image or multiple images:
 
