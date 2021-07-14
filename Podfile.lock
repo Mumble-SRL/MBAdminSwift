@@ -7,7 +7,7 @@ DEPENDENCIES:
   - MBurgerSwift (~> 1.0.12)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - MBNetworkingSwift
     - MBurgerSwift
 
@@ -15,6 +15,6 @@ SPEC CHECKSUMS:
   MBNetworkingSwift: 6fb96a4aeda0a2e280413f6bacb07a67bd8224e7
   MBurgerSwift: bdff089447f8d1e758fd64f3eda3d99507da7bc8
 
-PODFILE CHECKSUM: 34ce6fba21bb23cf08d60b1e99fee7f778564f52
+PODFILE CHECKSUM: cd42177280a036f58cac640f5f044f7c96cd6fe1
 
 COCOAPODS: 1.10.1
